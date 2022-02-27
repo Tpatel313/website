@@ -39,7 +39,7 @@
             ],
             [
                 "chair" => 'Basketball',
-                "name" => 'Brendon Thaler'
+                "name" => 'Keshav Ramanathan'
             ],
             [
                 "chair" => 'Big Buzz',
