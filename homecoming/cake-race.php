@@ -25,15 +25,15 @@
 <div class="container mb-3">
     <div class="row">
         <div class="col-4 text-center">
-            <p class="mb-0" style="text-align:center"><a href="mailto:rrchomecoming@gmail.com"><b>Ani Benge & Jack Crawford</b></a></p>
-            <p class="mb-0" style="text-align:center"><i>Reck Club Homecoming Co-Chairs</i></p>
+            <p class="mb-0" style="text-align:center"><a href="mailto:rrchomecoming@gmail.com"><b>Andreea Juravschi</b></a></p>
+            <p class="mb-0" style="text-align:center"><i>Reck Club Homecoming Chair</i></p>
         </div>
         <div class="col-4 text-center">
-            <p class="mb-0" style="text-align:center"><a href="mailto:gtfreshmancakerace@gmail.com"><b>Dean Plaskon</b></a></p>
+            <p class="mb-0" style="text-align:center"><a href="mailto:gtfcr2022@gmail.com"><b>Erin Prusener</b></a></p>
             <p class="mb-0" style="text-align:center"><i>Freshman Cake Race Sub-Chair</i></p>
         </div>
         <div class="col-4 text-center">
-            <p class="mb-0" style="text-align:center"><a href="mailto:gtfreshmancakerace@gmail.com"><b>Erin Prusener</b></a></p>
+            <p class="mb-0" style="text-align:center"><a href="mailto:gtfcr2022@gmail.com"><b>Gabriel Armstrong</b></a></p>
             <p class="mb-0" style="text-align:center"><i>Freshman Cake Race Sub-Chair</i></p>
         </div>
     </div>
@@ -43,9 +43,8 @@
 <div class="container">
     <div class= 'blog-header'>
         <div class='col-12' style="text-align: center;">
-            <h1>6:30 AM October 30th</h1>
+            <h1>6:30 AM October 8th</h1>
         </div>
-
 <!--    </div>-->
 
     <div class='row text-center'>
@@ -110,7 +109,7 @@
             "main" => 'Please fill out the following interest form if you are interested in participating in the 
                                     Freshman Cake Race. We will be sending each person who filled out the form the 
                                     official sign-up once it is finalized. Interest Form: 
-                                    <a href="https://forms.gle/5JWEZE8zVJcSgEVo8">Freshman Cake Race Interest Form</a> 
+                                    <a href="https://forms.gle/F24DRrSJCNLu1b2TA">Freshman Cake Race Interest Form</a> 
                                     <i>Note: filling out this form does not sign you up for the Freshman Cake Race. 
                                     After submitting this form, you will be sent the official sign-up form later this fall.</i>'
 
@@ -141,9 +140,7 @@
             "main" => 'Be sure to wear tennis shoes/sneakers and clothes that you would be comfortable running 
                             or walking in. Remember, you are encouraged to run or walk at your own pace. 
                             Depending on the temperature, make sure to dress in clothes that will keep you warm 
-                            (sweatshirt/jacket, pants, hats, gloves, etc). In the spirit of "Halloweekend" participants
-                            are encouraged to dress in costume, with a prize and additional homecoming points awarded 
-                            to the most spirited runner!'
+                            (sweatshirt/jacket, pants, hats, gloves, etc).'
         ],
         [
             "image" => '/homecoming/images/fcr-003.jpg',

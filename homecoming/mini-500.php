@@ -27,15 +27,15 @@
 
     <div class="row">
         <div class="col-4 text-center">
-            <p class="mb-0" style="text-align:center"><a href="mailto:rrchomecoming@gmail.com"><b>Ani Benge & Jack Crawford</b></a></p>
-            <p class="mb-0" style="text-align:center"><i>Reck Club Homecoming Co-Chairs</i></p>
+            <p class="mb-0" style="text-align:center"><a href="mailto:rrchomecoming@gmail.com"><b>Andreea Juravschi</b></a></p>
+            <p class="mb-0" style="text-align:center"><i>Reck Club Homecoming Chair</i></p>
         </div>
         <div class="col-4 text-center">
-            <p class="mb-0" style="text-align:center"><a href="mailto:georgiatechmini500@gmail.com"><b>Brandon Dobson</b></a></p>
+            <p class="mb-0" style="text-align:center"><a href="mailto:gtmini5002022@gmail.com"><b>Keshav Ramanathan</b></a></p>
             <p class="mb-0" style="text-align:center"><i>Mini 500 Sub-Chair</i></p>
         </div>
         <div class="col-4 text-center">
-            <p class="mb-0" style="text-align:center"><a href="mailto:georgiatechmini500@gmail.com"><b>Josh Thrift</b></a></p>
+            <p class="mb-0" style="text-align:center"><a href="mailto:gtmini5002022@gmail.com"><b>Melissa Braunstein</b></a></p>
             <p class="mb-0" style="text-align:center"><i>Mini 500 Sub-Chair</i></p>
         </div>
     </div>
@@ -45,7 +45,7 @@ s
 <div class="container">
     <div class= 'blog-header'>
         <div class='col-12' style="text-align: center;">
-            <h1>5:30PM October 29th</h1>
+            <h1>5:30PM October 7th</h1>
         </div>
     <div class='row text-center'>
 <!--        <div class='col-sm-4 col-xs-12 mb-3 mb-sm-0'>-->
@@ -107,9 +107,7 @@ s
                 [
                     "image" => '/homecoming/images/M51.jpg',
                     "title" => 'Sign Ups',
-                    "main" => 'Sign-Ups opened on Monday September 20th and will remain open until Friday September 
-                    24th. You can sign up <a href="https://gatech.universitytickets.com/w/event.aspx?id=1837&p=1">here</a> 
-                    Before registering, be sure you’re logged in, and then press "Get Tickets." Scroll until you find Mini 500. 
+                    "main" => 'More info will be coming closer to the start of the Fall semester. Stay tuned!
 '
 
                 ],
@@ -175,9 +173,7 @@ s
                                  and bruises so we recommend wearing some form of bottom that covers your legs 
                                  (jeans, sweatpants, leggings) as well are wearing reinforcement on your shoes 
                                  (such as duct tape) or shoes you don’t care about because they will be hitting the 
-                                pavement and may get scuffed up! In the spirit of ’Halloweekend,’ 
-                                teams have the option to dress in costume. Please remember that the Mini 500 shirt 
-                                should be able to fit over your costume.'
+                                pavement and may get scuffed up!'
     ],
     [
         "image" => '/homecoming/images/M56.jpg',
@@ -216,7 +212,7 @@ s
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <p class="text-muted"><i>Have any questions? Reach out to us at <a href="mailto:georgiatechmini500@gmail.com">georgiatechmini500@gmail.com</a> or <a href="mailto:rrchomecoming@gmail.com">rrchomecoming@gmail.com</a>.</i></p>
+            <p class="text-muted"><i>Have any questions? Reach out to us at <a href="mailto:gtmini5002022@gmail.com">gtmini5002022@gmail.com</a> or <a href="mailto:rrchomecoming@gmail.com">rrchomecoming@gmail.com</a>.</i></p>
         </div>
     </div>
 </div>

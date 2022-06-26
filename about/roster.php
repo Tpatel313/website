@@ -138,7 +138,7 @@
     <h4 class="mb-3">Probates</h4>
     <div class="row mb-3">
         <?php
-        $probates = [""];
+        $probates = ['Abby Hart', 'Agatha Fowler', 'Ainsley Ronco', 'Ajay Mathur', 'Allie Abbott', 'Bo Miller', 'Carolyn Braun', 'Connor White', 'Elianna Cohen', 'Gabriel Armstrong', 'Gal Ovadia', 'Kate Schutz', 'Matthew Aronin', 'Matthew Kistner', 'Michael DuBose', 'Miriam Guthrie', 'Trey Dobson', 'Nisha Rockwell', 'Omar Khan', 'Rohan Raman', 'Samuel Auborn', 'Sean Alexander', 'Simran Patel', 'Suraya John', 'Susannah Gordon', 'Tirth Patel', 'Toral Patel'];
         sort($probates);
         chunkAndFormatArray($probates,6, function ($chunk) {
             echo "<div class=\"col-md-2 text-center\">";
