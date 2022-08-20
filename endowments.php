@@ -13,11 +13,10 @@
     <p>The Georgia Tech Foundation will maintain the Dean Dull Ramblin’ Reck Endowment and the Class of 1964 50th Reunion Endowment .  The Ramblin’ Reck Club and the Driver will draw funds from the returns on the overall investment for the maintenance, preservation, and promotion of the Ramblin’ Reck as an icon of the Georgia Institute of Technology. With the addition of the Class of 1964 50th Reunion Endowment, Reck Club is able to maintain the Reck pristinely and have a financial safety net to cover unexpected costs. We are so grateful for the generous donations made by the Class of 1964 and Georgia Tech alumni and friends. The Reck could not continue to be as visible a mascot for the Georgia Tech community without your support. Thank you!</p>
 
     <h4 class="mb-4">Donation Information</h4>
-    <p>Those interested in donating can send a check to the following address:
+    <p>Those interested in donating can visit the following link:</p>
 
-    <p>GT Ramblin Reck Club<br/>711 Marietta Street<br/>Atlanta, GA 30332</p>
-
-    <p>Please make checks out to the Georgia Tech Foundation mentioning the Dean Dull Endowment in the subject line.</p>
+    <p><a href=https://mygeorgiatech.gatech.edu/giving/ramblinreck>https://mygeorgiatech.gatech.edu/giving/ramblinreck</a></p>
+    
     <h4 class="mb-4">Background Materials</h4>
     <p>A .pdf copy of the promotional information created to publicize the endowment as well as provide donation information can be found <a href="/assets/dean-dull-endowment-brochure.pdf">here</a>.</p>
 

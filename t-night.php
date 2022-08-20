@@ -208,6 +208,12 @@
         #parent{
             background:url('/img/t-night/parents_fund.png');
         }
+        #HDC{
+            background:url('/img/t-night/Home_Depot.png');
+        }
+        #BWW{
+            background:url('/img/t-night/BWW.png');
+        }
         footer{
             text-align: center;
             color:#AAA;
@@ -401,7 +407,7 @@
             <div id="schedule">
                 <h2>Schedule of Events</h2>
                 <ul>
-                    <li>Saturday, August 28th, 2022</span></li>
+                    <li>Sunday, August 28th, 2022</span></li>
                     <li>Traditions Festival - Callaway Plaza<span>5:30 PM</span></li>
                     <li>T-Night Show - Bobby Dodd<span>7:00 PM</span></li>
 <!--                    <li>Fireworks<span>9:00pm</span></li>-->
@@ -420,16 +426,14 @@
             <h2 align="center">Put on by Ramblin' Reck Club with the support of its sponsors:</h2>
             <div id="sponsor_block" align="center">
                 <div id="athlete" class="sponsor"></div>
-                <div id="inspire" class="sponsor"></div>
                 <div id="reck-club" class="sponsor"></div>
-                <div id="bj" class="sponsor"></div>
-                <div id="chik" class="sponsor"></div>
+                <div id="parent" class="sponsor"></div>
             </div>
             <div id="sponsor_block" align="center">
-                <div id="parent" class="sponsor"></div>
                 <div id="tiffs" class="sponsor"></div>
-                <div id="waho" class="sponsor"></div>
-                <div id="lotto" class="sponsor"></div>
+                <div id="inspire" class="sponsor"></div>
+                <div id="HDC" class="sponsor"></div>
+                <div id="BWW" class="sponsor"></div>
             </div>
         </div>
     </div>
