@@ -16,7 +16,7 @@
     <p>Those interested in donating can visit the following link:</p>
 
     <p><a href=https://mygeorgiatech.gatech.edu/giving/ramblinreck>https://mygeorgiatech.gatech.edu/giving/ramblinreck</a></p>
-    
+
     <h4 class="mb-4">Background Materials</h4>
     <p>A .pdf copy of the promotional information created to publicize the endowment as well as provide donation information can be found <a href="/assets/dean-dull-endowment-brochure.pdf">here</a>.</p>
 
