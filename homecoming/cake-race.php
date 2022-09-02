@@ -29,7 +29,7 @@
             <p class="mb-0" style="text-align:center"><i>Reck Club Homecoming Chair</i></p>
         </div>
         <div class="col-4 text-center">
-            <p class="mb-0" style="text-align:center"><a href="mailto:gtfcr2022@gmail.com"><b>Erin Prusener</b></a></p>
+            <p class="mb-0" style="text-align:center"><a href="mailto:gtfcr2022@gmail.com"><b>Dean Plaskon</b></a></p>
             <p class="mb-0" style="text-align:center"><i>Freshman Cake Race Sub-Chair</i></p>
         </div>
         <div class="col-4 text-center">

@@ -59,7 +59,7 @@ s
             <a class='btn btn-md btn-secondary' href="https://gatech.universitytickets.com/w/event.aspx?id=1837&p=1">Event Waiver</a>
         </div>
         <div class='col-sm-4 col-xs-12 mb-3 mb-sm-0'>
-            <a class='btn btn-md btn-primary' href="https://docs.google.com/document/d/1n5vIXj4beVUq1LP5mvF7KxquxEGdb6WbncgA8Wv9eSI/edit" target="_blank">Event Rules</a>
+            <a class='btn btn-md btn-primary' href="https://docs.google.com/document/d/1F6ufyRBopoD691_pbM7hZTcDtfPeTQ7O3-7YeA4ua20/edit?usp=sharing" target="_blank">Event Rules</a>
         </div>
 <!--        <div class='col-sm-4 col-xs-12'>-->
 <!--            <a class='btn btn-md btn-secondary' href="/assets/A-Guide-to-Mini-500.pdf" target="_blank">Guide to Mini 500</a>-->
@@ -107,7 +107,9 @@ s
                 [
                     "image" => '/homecoming/images/M51.jpg',
                     "title" => 'Sign Ups',
-                    "main" => 'More info will be coming closer to the start of the Fall semester. Stay tuned!
+                    "main" => 'Sign-Ups open on Friday, September 2nd. You can sign up <a href="https://gatech.universitytickets.com/w/event.aspx?id=1914&r=8a10173f13e34f03832cae5ad05a7802">here</a>. 
+                    Before registering, be sure you’re logged in, and then press “Get Tickets”. Scroll until you find Mini 500.
+                    Only one team member needs to sign up and pay the registration fee of $10.
 '
 
                 ],
