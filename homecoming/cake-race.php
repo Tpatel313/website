@@ -53,7 +53,7 @@
         </div>
 <!--        sign up button-->
         <div class='col-sm-4 col-xs-12 mb-3 mb-sm-6' style="text-align: center;">
-            <a class='btn btn-md btn-secondary' href="https://forms.gle/5JWEZE8zVJcSgEVo8">Event Waiver</a>
+            <a class='btn btn-md btn-secondary' href="https://forms.gle/F24DRrSJCNLu1b2TA">Interest Form</a>
         </div>
         <div class='col-sm-4 col-xs-12 mb-sm-3'>
             <?php //If you change the name of the rules section further down, change the href here too. ?>
@@ -182,7 +182,7 @@ The full rule book can be found here: <a href="https://docs.google.com/document/
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <p class="text-muted"><i>Have any questions? Reach out to us at <a href="mailto:gtfreshmancakerace@gmail.com">gtfreshmancakerace@gmail.com</a> or <a href="mailto:rrchomecoming@gmail.com">rrchomecoming@gmail.com</a>.</i></p>
+            <p class="text-muted"><i>Have any questions? Reach out to us at <a href="mailto:gtfcr2022@gmail.com">gtfcr2022@gmail.com</a> or <a href="mailto:rrchomecoming@gmail.com">rrchomecoming@gmail.com</a>.</i></p>
         </div>
     </div>
 </div>
