@@ -53,16 +53,14 @@
             </div>
             <!--        sign up button-->
             <div class='col-sm-4 col-xs-12 mb-3 mb-sm-6' style="text-align: center;">
-                <a class='btn btn-md btn-secondary' href="https://forms.gle/HhY5QLjPHhzyQGyq7">Event Waiver</a>
+                <a class='btn btn-md btn-secondary' href="https://gatech.campuslabs.com/engage/event/8351909">RSVP</a>
             </div>
             <div class='col-sm-4 col-xs-12 mb-sm-3'>
                 <a class='btn btn-md btn-primary' href="https://docs.google.com/document/d/1mQUOltMUkQfI17LI-luxrapdxB7CWMAmpJfCgUgtiEU/edit?usp=sharing" target="_blank">Event Rules</a>
             </div>
             <div class='row text-center'>
                 <!--        <div class='col-sm-4 col-xs-12 mb-3 mb-sm-6' style="text-align: center;">-->
-                <i>The Ramblin Reck Club’s sign-up form is for individual registrations. Organizations wishing to receive
-                    points must also sign up for this event using SCPC’s Homecoming waiver,
-                    found at <a href="https://gatech.universitytickets.com/w/event.aspx?id=1837&p=1">this link</a></i>
+                <i>The Ramblin Reck Club’s RSVP Link is for all participating groups after signing up through their respective form. Sign-ups can be found below.</i>
             </div>
         </div>
 <div class="container">
@@ -97,7 +95,10 @@
         [
             "image" => '/homecoming/images/wp-002.jpg',
             "title" => 'Sign Ups',
-            "main" => 'More info will be coming closer to the start of the Fall semester. Stay tuned!'
+            "main" => '<p>Participants must first sign up through one of the following links:</p><p><a href="https://gatech.universitytickets.com/w/event.aspx?id=1914&p=1">Competing Organizations</a>
+                        </p><p><a href="https://docs.google.com/forms/d/e/1FAIpQLSet4qjMWb4OOm95ghCuw2mnnlGeu8U7fIgelNbHynChKlL0Kw/viewform?usp=sf_link">Alumni Classic Cars</a>
+                        </p><p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdmxKLRbQ_TgVzj_syt-asBHVP9hMOnzfBu8hCMQOGgOt6b8Q/viewform?usp=sf_link">Enthusiast Entries</a>
+                        </p><p> And then RSVP with the Ramblin\' Reck Club at <a href="https://gatech.campuslabs.com/engage/event/8351909">this link</a>.'
             //<p>Participants must sign BOTH
               //          our waiver <a href="https://forms.gle/HhY5QLjPHhzyQGyq7">found here</a> and through SCPC
                 //        which can be found at <a href="https://gatech.universitytickets.com/w/event.aspx?id=1837&p=1">this link.</a> </p>'

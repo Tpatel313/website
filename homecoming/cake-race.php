@@ -53,7 +53,7 @@
         </div>
 <!--        sign up button-->
         <div class='col-sm-4 col-xs-12 mb-3 mb-sm-6' style="text-align: center;">
-            <a class='btn btn-md btn-secondary' href="https://forms.gle/F24DRrSJCNLu1b2TA">Interest Form</a>
+            <a class='btn btn-md btn-secondary' href="https://gatech.campuslabs.com/engage/event/8351904">Sign Up</a>
         </div>
         <div class='col-sm-4 col-xs-12 mb-sm-3'>
             <?php //If you change the name of the rules section further down, change the href here too. ?>
@@ -106,12 +106,10 @@
         [
             "image" => '/homecoming/images/fcr-002.jpg',
             "title" => 'Sign Ups',
-            "main" => 'Please fill out the following interest form if you are interested in participating in the 
-                                    Freshman Cake Race. We will be sending each person who filled out the form the 
-                                    official sign-up once it is finalized. Interest Form: 
-                                    <a href="https://forms.gle/F24DRrSJCNLu1b2TA">Freshman Cake Race Interest Form</a> 
-                                    <i>Note: filling out this form does not sign you up for the Freshman Cake Race. 
-                                    After submitting this form, you will be sent the official sign-up form later this fall.</i>'
+            "main" => 'The official 2022 Freshman Cake Race sign-up can be found here: 
+                                    <a href="https://gatech.campuslabs.com/engage/event/8351904">Freshman Cake Race Sign-up</a> 
+                                    <i>Note: filling out the interest form did not sign you up for the Freshman Cake Race. 
+                                    You must still complete this official sign-up.</i>'
 
         ],
         [
