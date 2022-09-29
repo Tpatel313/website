@@ -42,7 +42,7 @@
 <div class="container">
     <div class= 'blog-header'>
         <div class='col-12' style="text-align: center;">
-            <h1>9:00 AM October 8th</h1>
+            <h1>8:30 AM October 8th</h1>
         </div>
 
         <!--    </div>-->
@@ -108,7 +108,7 @@
             "image" => '/homecoming/images/wp-003.jpg',
             "title" => 'Logistics',
             "main" => '<p>The Wreck parade will begin at the McCamish Parking Lot and proceed up Fowler street finishing
-                        across Ferst Drive. The parade will commence at 9:00AM on October 8th. A full list of the rules
+                        across Ferst Drive. The parade will commence at 8:30AM on October 8th. A full list of the rules
                         can be <a href="https://docs.google.com/document/d/1mQUOltMUkQfI17LI-luxrapdxB7CWMAmpJfCgUgtiEU/edit?usp=sharing">found here.</a></p>'
         ],
         [

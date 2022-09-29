@@ -115,7 +115,10 @@
         [
             "image" => '/homecoming/images/fcr-005.jpg',
             "title" => 'Race Bib Pickup',
-            "main" => 'The Freshman Cake Race Co-Chairs are still evaluating the best way to safely proceed with bib distribution. Each participant who signs up will be emailed with more exact information or one can check back here for updates.'
+            "main" => 'If you are an on-campus resident in a first-year dorm, 
+            your RA will distribute your bib to you one or two days before the race. 
+            Otherwise, a member will be in touch with you a few days before the race with pick-up details. 
+            Bibs WILL NOT be distributed on the morning of the race unless you email <a href="mailto:gtfcr2022@gmail.com"><b>gtfcr2022@gmail.com</b></a> with an accommodation request.'
         ]
     );
 
