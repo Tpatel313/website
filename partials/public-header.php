@@ -70,9 +70,12 @@
                         <a class="dropdown-item" href="/reck/request.php">Request the Reck</a>
                         <a class="dropdown-item" href="/big-buzz">Request Big Buzz</a>
                     </div>
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link btn-link" href="https://reckclub.ecwid.com">Store</a>-->
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link btn-link" href="https://reckclub.ecwid.com">Store</a>
+                    <a class="nav-link btn-link" href="https://traditions.gatech.edu/">Traditions</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link btn-link" href="/traditionkeepers">Tradition Keepers</a>
