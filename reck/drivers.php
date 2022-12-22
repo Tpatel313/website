@@ -10,13 +10,17 @@
 <div class="container">
 <h2 class="mb-3">Drivers</h2>
 <img class="img-responsive mb-3" width="100%" src="/img/promo/ReckFreshmanHIll.png">
-<p>Each year, one student is chosen from the ranks of the club to be the sole driver and primary caretaker of the Ramblin’ Reck. He or she is the only person with keys to the car, and the only person allowed to drive or transport the Reck. He or she knows the ins and outs of the car better than the back of his hand and spends countless hours every week not only making sure that the car is running in tip-top shape, but also scheduling appearances, meeting with alumni and administration, and working on other projects in the best interest of the Reck. Despite the hard work, the job is perhaps the most meaningful and fulfilling on campus, and an unforgettable experience for every driver.</p>
+<p>Each year, one student is chosen from the ranks of the club to be the sole driver and primary caretaker of the Ramblin’ Reck. They are the only person with keys to the car, and the only person allowed to drive or transport the Reck. They know the ins and outs of the car better than the back of their hand and spends countless hours every week not only making sure that the car is running in tip-top shape, but also scheduling appearances, meeting with alumni and administration, and working on other projects in the best interest of the Reck. Despite the hard work, the job is perhaps the most meaningful and fulfilling on campus, and an unforgettable experience for every driver.</p>
 
 <h4 class="mb-3">The History of Drivers</h4>
 <p class="text-muted">Since 1968, drivers have been selected by the Ramblin' Reck Club.</p>
 <div class="row">
     <?php
     $drivers = [
+        [
+            "year" => "2023",
+            "name" => "Omar Khan"
+        ],
         [
             "year" => "2022",
             "name" => "Evalyn Edwards"
