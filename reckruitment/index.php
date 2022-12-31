@@ -84,7 +84,7 @@
     </ul>
 
 <h4 class="mb-2" id="first-social">First Social (Mandatory)</h4>
-    <p>Attending this social is your chance as an applicant to meet Reck Clubbers, get a feel for what Ramblin’ Reck Club is all about, ask any questions you may have about the Club or getting involved, and most importantly, sign up for an interview time. No need to stress about this event; be yourself and talk to anyone you do not already know! This event will be hosted in-person at Bobby Dodd Stadium.</p>
+    <p>Attending this social is your chance as an applicant to meet Reck Clubbers, get a feel for what Ramblin’ Reck Club is all about, ask any questions you may have about the Club or getting involved, and most importantly, sign up for an interview time. No need to stress about this event; be yourself and talk to anyone you do not already know! This event will be hosted in-person at a location to be determined.</p>
     <ul>
         <li><strong>First Social: Monday, February 6th</strong></li>
     </ul>
@@ -100,7 +100,7 @@
     </ul>
 
 <h4 class="mb-2" id="second-social">Second Social (Mandatory)</h4>
-    <p>After all interviews have been conducted, the Membership Chairs will notify each applicant whether they will advance to the second round of RECKruitment. During this second round, applicants will attend a mandatory second social held from <strong>1:00pm-4:00pm on Saturday, February 11th</strong>. Further details for this event will be sent out to those invited applicants only.</p>
+    <p>After all interviews have been conducted, the Membership Chairs will notify each applicant whether they will advance to the second round of RECKruitment. During this second round, applicants will attend a mandatory second social held from <strong>1:30pm-3:30pm on Saturday, February 11th</strong>. Further details for this event will be sent out to those invited applicants only.</p>
 
 <hr class="mb-3"> <!--    adds dividing line-->
     <p>Any time conflicts with these events should be brought to the attention of <a href="mailto:membershipchair@reckclub.org">Charlie Hammer and Keshav Ramanathan</a>, Ramblin’ Reck Club Membership Co-Chairs, no later than <strong>Tuesday, January 31st</strong>.</p>
