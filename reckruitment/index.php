@@ -65,7 +65,7 @@
 
 <ul>
     <li><strong>Wednesday, January 11th at 7:00pm-8:00pm</strong> in <a href="https://studentcenter.gatech.edu/student-center-maps" target="blank">Cypress Theater</a> (Student Center)</li>
-    <li><strong>Tuesday, January 24th at 7:00pm-8:00pm</strong> in <a href="https://studentcenter.gatech.edu/student-center-maps" target="blank">Cypress Theater</a> (Student Center)</li>
+    <li><strong>Tuesday, January 24th at 7:00pm-8:00pm</strong> in <a href="https://studentcenter.gatech.edu/student-center-maps" target="blank">Northside Room</a> (Student Center)</li>
     <li><strong>Wednesday, January 29th at 2:00pm-3:00pm</strong> on <a href="https://gatech.zoom.us/j/93977743734?pwd=T2FRS0srNnJ6TFZMV3psZGJZTTlTUT09" target="blank">Zoom.</a> </li>
     <!--    <li><strong>First Social: Monday, January 28th at 7:15pm (Mandatory)</strong></li>-->
 <!--  <li>Check back here in December 2019 for info session dates for the 2020 recruitment cycle!</li>-->
