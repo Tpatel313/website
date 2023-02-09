@@ -31,47 +31,47 @@
         <?php $chairs = array(
             [
                 "chair" => 'Alumni Relations',
-                "name" => 'George P. Burdell'
+                "name" => 'Aggie Fowler'
             ],
             [
                 "chair" => 'Baseball',
-                "name" => 'George P. Burdell'
+                "name" => 'Michael DuBose'
             ],
             [
                 "chair" => 'Basketball',
-                "name" => 'George P. Burdell'
+                "name" => 'Madison Meyers'
             ],
             [
                 "chair" => 'Big Buzz',
-                "name" => 'George P. Burdell'
+                "name" => 'Joey D\'Adamio'
             ],
             [
                 "chair" => 'Campus Outreach',
-                "name" => 'George P. Burdell'
+                "name" => 'Sam Auborn'
             ],
             [
                 "chair" => 'Fundraising',
-                "name" => 'George P. Burdell'
+                "name" => 'Matthew Kistner'
             ],
             [
                 "chair" => 'Football',
-                "name" => 'George P. Burdell'
+                "name" => 'Susannah Gordon'
             ],
             [
                 "chair" => 'Homecoming',
-                "name" => 'George P. Burdell'
+                "name" => 'Bethany McMorris'
             ],
             [
                 "chair" => 'Non-Revenue Sports',
-                "name" => 'George P. Burdell'
+                "name" => 'Connor White'
             ],
             [
                 "chair" => 'Public Relations',
-                "name" => 'George P. Burdell'
+                "name" => 'Nisha Rockwell'
             ],
             [
                 "chair" => 'Probate Guides',
-                "name" => 'George P. Burdell and George P. Burdell'
+                "name" => 'Eleanor Froula and Jordan Lawson'
             ],
             [
                 "chair" => 'RECKruitment',
@@ -79,22 +79,22 @@
             ],
             [
                 "chair" => 'T-Book',
-                "name" => 'George P. Burdell'
+                "name" => 'Matthew Aronin'
             ],
             [
                 "chair" => 'T-Night',
-                "name" => 'George P. Burdell'
+                "name" => 'Suraya John'
             ],
             [
                 "chair" => 'Technology',
-                "name" => 'George P. Burdell'
+                "name" => 'Tirth Patel'
             ],
             [
                 "chair" => 'Traditions',
-                "name" => 'George P. Burdell'
+                "name" => 'Reid Spencer'
             ],
             [   "chair" => 'Diversity and Inclusion',
-                "name" => 'George P. Burdell'
+                "name" => 'Rohan Raman'
              ]);
         uasort($chairs, function($a, $b) {
             if ($a["chair"] > $b["chair"]) {
