@@ -1,6 +1,6 @@
 <?php
 	require "logged_in_check.php";
-	if ($_SESSION[isAdmin]==0 && $_SESSION[isEventAdmin]==0) {
+	if ($_SESSION['isAdmin']==0 && $_SESSION['isEventAdmin']==0) {
 		echo "<meta http-equiv=\"REFRESH\" content=\"0;url=points.php\">";
 		die;
 	} else {}

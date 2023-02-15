@@ -18,7 +18,7 @@
 	if($num_results == 0){
 		echo "<p>There are currently no family events.</p>";
 	} else {
-        if($_SESSION[isAdmin]==1) {
+        if($_SESSION['isAdmin']==1) {
         	$query2 = $db->query("SELECT familyID, familyName FROM Family");
         		$query->setFetchMode(PDO::FETCH_ASSOC);
         	$query3 = $db->query("SELECT * FROM Event WHERE isFamilyEvent = '1' ORDER BY dateMonth, dateDay, eventName");

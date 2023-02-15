@@ -2,7 +2,7 @@
 require "logged_in_check.php";
 require "set_session_vars_full.php";
 require "database_connect.php";
-if ($_SESSION[isAdmin]==0) {
+if ($_SESSION['isAdmin']==0) {
     echo "<meta http-equiv=\"REFRESH\" content=\"0;url=points.php\">";
     die;
 } else {}

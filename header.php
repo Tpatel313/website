@@ -34,7 +34,7 @@
 				<div class="row">
 					<div class="seven columns ">
 						<span class="title">Ramblin' Reck Club</span><br>
-						<span class="meta">Logged in as <?php echo $_SESSION[username] ?></span>
+						<span class="meta">Logged in as <?php echo $_SESSION['username'] ?></span>
 					</div>
 					
 					<div class="eight columns">

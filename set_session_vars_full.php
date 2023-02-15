@@ -1,6 +1,6 @@
 <?php
-	$memberID = $_SESSION[memberID];
-	$username = $_SESSION[username];
+	$memberID = $_SESSION['memberID'];
+	$username = $_SESSION['username'];
 	$firstName = $_SESSION[firstName];
 	$lastName = $_SESSION[lastName];
 	$email = $_SESSION[email];
@@ -16,11 +16,11 @@
 	$gradMonth = $_SESSION[gradMonth];
 	$reckerPair = $_SESSION[reckerPair];
 	$memFamilyID = $_SESSION[memFamilyID];
-	$isAdmin = $_SESSION[isAdmin];
+	$isAdmin = $_SESSION['isAdmin'];
 	$isSecretary = $_SESSION[isSecretary];
 	$isTreasurer = $_SESSION[isTreasurer];
 	$isVP = $_SESSION[isVP];
-	$isEventAdmin = $_SESSION[isEventAdmin];
+	$isEventAdmin = $_SESSION['isEventAdmin'];
 	$memberPoints = $_SESSION[memberPoints];
 	$mandatoryEventCount = $_SESSION[mandatoryEventCount];
 	$sportsEventCount = $_SESSION[sportsEventCount];

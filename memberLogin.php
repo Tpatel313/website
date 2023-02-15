@@ -9,8 +9,8 @@ $count = $query->rowCount();
 if ($count==1) {
     $row = $query->fetch();
     session_start();
-    $_SESSION[memberID] = $row[memberID];
-    $_SESSION[username] = $row[username];
+    $_SESSION['memberID'] = $row[memberID];
+    $_SESSION['username'] = $row[username];
     $_SESSION[firstName] = $row[firstName];
     $_SESSION[lastName] = $row[lastName];
     $_SESSION[email] = $row[email];
@@ -26,11 +26,11 @@ if ($count==1) {
     $_SESSION[gradMonth] = $row[gradMonth];
     $_SESSION[reckerPair] = $row[reckerPair];
     $_SESSION[memFamilyID] = $row[memFamilyID];
-    $_SESSION[isAdmin] = $row[isAdmin];
+    $_SESSION['isAdmin'] = $row[isAdmin];
     $_SESSION[isSecretary] = $row[isSecretary];
     $_SESSION[isTreasurer] = $row[isTreasurer];
     $_SESSION[isVP] = $row[isVP];
-    $_SESSION[isEventAdmin] = $row[isEventAdmin];
+    $_SESSION['isEventAdmin'] = $row[isEventAdmin];
     $_SESSION[memberPoints] = $row[memberPoints];
     $_SESSION[mandatoryEventCount] = $row[mandatoryEventCount];
     $_SESSION[sportsEventCount] = $row[sportsEventCount];
@@ -52,7 +52,7 @@ require "html_header_begin.txt";
 
 <?php
 require "html_header_end.txt";
-if (isset($_SESSION[memberID])==1) {
+if (isset($_SESSION['memberID'])==1) {
     print("<h3><script type=\"text/javascript\">printImage();</script></h3>");
     // print("<meta http-equiv=\"refresh\" ");
     print("<h3>Login successful</h3>\n");

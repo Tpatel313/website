@@ -16,7 +16,7 @@ $pageTitle = "Points";
         <div class="col-md-4 col-sm-auto">
             <div class="btn-group float-md-right">
                 <?php
-                if($_SESSION[isAdmin]==1 || $_SESSION[isVP]==1) {
+                if($_SESSION['isAdmin']==1 || $_SESSION[isVP]==1) {
                     echo "<form action=\"familyEvents.php\" method=\"POST\">";
                     echo "<button type=\"submit\" class='btn btn-secondary'  value=\"Family Events\">Family Events</button>";
                     echo "</form>";
