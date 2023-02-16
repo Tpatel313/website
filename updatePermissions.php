@@ -9,22 +9,22 @@
 	require "html_header_begin.txt";
 	require "html_header_end.txt";
 	
-	if($_POST[selectedMember] != "none" && $_POST[selectedRole] != "none") {
-		if(isset($_POST[add])) {
-			if($_POST[selectedRole] == "isAdmin") {
+	if($_POST['selectedMember'] != "none" && $_POST['selectedRole'] != "none") {
+		if(isset($_POST['add'])) {
+			if($_POST['selectedRole'] == "isAdmin") {
 				$query = $db->prepare("UPDATE Member SET isAdmin = 1 WHERE memberID = :memberID");
-				$query->execute(array('memberID'=>$_POST[selectedMember]));
-			}elseif($_POST[selectedRole] == "isEventAdmin") {
+				$query->execute(array('memberID'=>$_POST['selectedMember']));
+			}elseif($_POST['selectedRole'] == "isEventAdmin") {
 				$query = $db->prepare("UPDATE Member SET isEventAdmin = 1 WHERE memberID = :memberID");
-				$query->execute(array('memberID'=>$_POST[selectedMember]));
+				$query->execute(array('memberID'=>$_POST['selectedMember']));
 			}
-		}elseif(isset($_POST[remove])) {
-			if($_POST[selectedRole] == "isAdmin") {
+		}elseif(isset($_POST['remove'])) {
+			if($_POST['selectedRole'] == "isAdmin") {
 				$query = $db->prepare("UPDATE Member SET isAdmin = 0 WHERE memberID = :memberID");
-				$query->execute(array('memberID'=>$_POST[selectedMember]));
-			}elseif($_POST[selectedRole] == "isEventAdmin") {
+				$query->execute(array('memberID'=>$_POST['selectedMember']));
+			}elseif($_POST['selectedRole'] == "isEventAdmin") {
 				$query = $db->prepare("UPDATE Member SET isEventAdmin = 0 WHERE memberID = :memberID");
-				$query->execute(array('memberID'=>$_POST[selectedMember]));
+				$query->execute(array('memberID'=>$_POST['selectedMember']));
 			}
 		}
 	}

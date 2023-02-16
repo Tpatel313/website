@@ -22,7 +22,7 @@
 	}
 	
 	$query = $db->prepare("UPDATE Event SET eventName=:newEventName, dateYear=:newDateYear, dateMonth=:newDateMonth, dateDay=:newDateDay, pointValue=:newPointValue, isBonus=:bonus, isFamilyEvent=:family, type=:newType WHERE eventID=:eventID");
-	$query->execute(array('newEventName'=>$_POST[newEventName], 'newDateYear'=>$_POST[newDateYear], 'newDateMonth'=>$_POST[newDateMonth], 'newDateDay'=>$_POST[newDateDay], 'newPointValue'=>$_POST[newPointValue], 'bonus'=>$bonus, 'family'=>$family, 'newType'=>$_POST[newType], 'eventID'=>$_POST['selectedEventID']));
+	$query->execute(array('newEventName'=>$_POST['newEventName'], 'newDateYear'=>$_POST['newDateYear'], 'newDateMonth'=>$_POST['newDateMonth'], 'newDateDay'=>$_POST['newDateDay'], 'newPointValue'=>$_POST['newPointValue'], 'bonus'=>$bonus, 'family'=>$family, 'newType'=>$_POST['newType'], 'eventID'=>$_POST['selectedEventID']));
 
 	// CALCULATE ALL MEMBERS' TOTAL POINTS
 	//------------------------------------
@@ -32,7 +32,7 @@
 	
 	while($rowMem = $resultMem->fetch()) {
 	
-	    $tempMemberID = $rowMem[memberID];
+	    $tempMemberID = $rowMem['memberID'];
 	    
 		$query = $db->prepare("SELECT pointValue, type FROM AttendsEvent JOIN Event ON AttendsEvent.eventID = Event.eventID WHERE memberID = :tempMemberID");
 		$query->execute(array('tempMemberID'=>$tempMemberID));
@@ -45,21 +45,21 @@
 		$work = 0;
 		
 		while($row = $query->fetch()) {
-			if($row[type]=='mandatory'){
+			if($row['type']=='mandatory'){
 				$mandatory++;
-				$num += $row[pointValue];
+				$num += $row['pointValue'];
 			}
-			else if($row[type]=='sports'){
+			else if($row['type']=='sports'){
 				$sports++;
-				$num += $row[pointValue];
+				$num += $row['pointValue'];
 			}
-			else if($row[type]=='social'){
+			else if($row['type']=='social'){
 				$social++;
-				$num += $row[pointValue];
+				$num += $row['pointValue'];
 			}
-			else if($row[type]=='work'){
+			else if($row['type']=='work'){
 				$work++;
-				$num += $row[pointValue];
+				$num += $row['pointValue'];
 			}		
 		}
 
@@ -79,7 +79,7 @@
 	         
 	while($rowFam = $resultFam->fetch()) {
 	
-	    $tempFamilyID = $rowFam[familyID];
+	    $tempFamilyID = $rowFam['familyID'];
 	    
 	    $famnum = 0;
 	    
@@ -90,7 +90,7 @@
 		$query->execute(array('tempFamilyID'=>$tempFamilyID));
 			$query->setFetchMode(PDO::FETCH_ASSOC);
 		$row = $query->fetch();
-		$famnum = $row[pts];
+		$famnum = $row['pts'];
 					
 	// SET ALL FAMILIES' TOTAL POINTS IN DATABASE
 	// ------------------------------------------
@@ -101,7 +101,7 @@
 	}
 
 	echo "<h3>Event Updated</h3>";
-	echo "<meta http-equiv=\"refresh\" content=\"2; url=editEvents.php?dateMonth=".$_POST[newDateMonth]."&dateDay=".$_POST[newDateDay]."&eventID=".$_POST[eventID]."\">";
+	echo "<meta http-equiv=\"refresh\" content=\"2; url=editEvents.php?dateMonth=".$_POST['newDateMonth']."&dateDay=".$_POST['newDateDay']."&eventID=".$_POST['eventID']."\">";
 
 	require "html_footer.txt";
 ?>

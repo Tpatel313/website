@@ -9,12 +9,12 @@
 	require "html_header_begin.txt";
 	require "html_header_end.txt";
 
-	if(isset($_POST[update])) {
+	if(isset($_POST['update'])) {
 		$query = $db->prepare("INSERT INTO AttendsEvent (familyID, eventID) VALUES (:family, :event)");
-		$query->execute(array('family'=>$_POST[family], 'event'=>$_POST[event]));
-	} elseif(isset($_POST[remove])) {
+		$query->execute(array('family'=>$_POST['family'], 'event'=>$_POST['event']));
+	} elseif(isset($_POST['remove'])) {
 		$query = $db->prepare("DELETE FROM AttendsEvent WHERE familyID=:family AND eventID=:event");
-		$query->execute(array('family'=>$_POST[family], 'event'=>$_POST[event]));
+		$query->execute(array('family'=>$_POST['family'], 'event'=>$_POST['event']));
 	}
 
 	// CALCULATE ALL FAMILIES' TOTAL POINTS
@@ -25,7 +25,7 @@
 	         
 	while($rowFam = $resultFam->fetch()) {
 	
-	    $tempFamilyID = $rowFam[familyID];
+	    $tempFamilyID = $rowFam['familyID'];
 	    
 	    $famnum = 0;
 	    
@@ -36,7 +36,7 @@
 		$query->execute(array('tempFamilyID'=>$tempFamilyID));
 			$query->setFetchMode(PDO::FETCH_ASSOC);
 		$row = $query->fetch();
-		$famnum = $row[pts];
+		$famnum = $row['pts'];
 					
 	// SET ALL FAMILIES' TOTAL POINTS IN DATABASE
 	// ------------------------------------------

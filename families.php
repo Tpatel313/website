@@ -16,7 +16,7 @@ $pageTitle = "Points";
         <div class="col-md-4 col-sm-auto">
             <div class="btn-group float-md-right">
                 <?php
-                if($_SESSION['isAdmin']==1 || $_SESSION[isVP]==1) {
+                if($_SESSION['isAdmin']==1 || $_SESSION['isVP']==1) {
                     echo "<form action=\"familyEvents.php\" method=\"POST\">";
                     echo "<button type=\"submit\" class='btn btn-secondary'  value=\"Family Events\">Family Events</button>";
                     echo "</form>";
@@ -35,8 +35,8 @@ $pageTitle = "Points";
                 $query->setFetchMode(PDO::FETCH_ASSOC);
                 $row = $query->fetch();
             ?>
-            <h4 class="m-0"><?php echo (strlen($row[familyName]) > 0) ? $row[familyName] : 'Family 1'; ?> </h4>
-            <p class="text-primary mb-2">Points: <?php echo (isset($row[familyPoints]) ? $row[familyPoints] : '0'); ?></p>
+            <h4 class="m-0"><?php echo (strlen($row['familyName']) > 0) ? $row['familyName'] : 'Family 1'; ?> </h4>
+            <p class="text-primary mb-2">Points: <?php echo (isset($row['familyPoints']) ? $row['familyPoints'] : '0'); ?></p>
             <?php
                 $query = $db->query("SELECT firstName, lastName, memberPoints FROM Member WHERE memFamilyID=1 AND status != 'alumni' ORDER BY memberPoints DESC, lastName, firstName");
                 $query->setFetchMode(PDO::FETCH_ASSOC);
@@ -51,7 +51,7 @@ $pageTitle = "Points";
 
                     <?php
                         while($row = $query->fetch()) {
-                            echo "<tr><td>" . $row[firstName]." ".$row[lastName]."</td><td align=\"right\">" . $row[memberPoints] . "</td></tr>";
+                            echo "<tr><td>" . $row['firstName']." ".$row['lastName']."</td><td align=\"right\">" . $row['memberPoints'] . "</td></tr>";
 
                         }
                     ?>
@@ -67,8 +67,8 @@ $pageTitle = "Points";
             $query->setFetchMode(PDO::FETCH_ASSOC);
             $row = $query->fetch();
             ?>
-            <h4 class="m-0"><?php echo (strlen($row[familyName]) > 0) ? $row[familyName] : 'Family 2'; ?> </h4>
-            <p class="text-primary mb-2">Points: <?php echo (isset($row[familyPoints]) ? $row[familyPoints] : '0'); ?></p>
+            <h4 class="m-0"><?php echo (strlen($row['familyName']) > 0) ? $row['familyName'] : 'Family 2'; ?> </h4>
+            <p class="text-primary mb-2">Points: <?php echo (isset($row['familyPoints']) ? $row['familyPoints'] : '0'); ?></p>
             <?php
             $query = $db->query("SELECT firstName, lastName, memberPoints FROM Member WHERE memFamilyID=2 AND status != 'alumni' ORDER BY memberPoints DESC, lastName, firstName");
             $query->setFetchMode(PDO::FETCH_ASSOC);
@@ -83,7 +83,7 @@ $pageTitle = "Points";
 
                     <?php
                     while($row = $query->fetch()) {
-                        echo "<tr><td>" . $row[firstName]." ".$row[lastName]."</td><td align=\"right\">" . $row[memberPoints] . "</td></tr>";
+                        echo "<tr><td>" . $row['firstName']." ".$row['lastName']."</td><td align=\"right\">" . $row['memberPoints'] . "</td></tr>";
                     }
                     ?>
                     </tbody>
@@ -100,8 +100,8 @@ $pageTitle = "Points";
             $query->setFetchMode(PDO::FETCH_ASSOC);
             $row = $query->fetch();
             ?>
-            <h4 class="m-0"><?php echo (strlen($row[familyName]) > 0) ? $row[familyName] : 'Family 3'; ?> </h4>
-            <p class="text-primary mb-2">Points: <?php echo (isset($row[familyPoints]) ? $row[familyPoints] : '0'); ?></p>
+            <h4 class="m-0"><?php echo (strlen($row['familyName']) > 0) ? $row['familyName'] : 'Family 3'; ?> </h4>
+            <p class="text-primary mb-2">Points: <?php echo (isset($row['familyPoints']) ? $row['familyPoints'] : '0'); ?></p>
             <?php
             $query = $db->query("SELECT firstName, lastName, memberPoints FROM Member WHERE memFamilyID=3 AND status != 'alumni' ORDER BY memberPoints DESC, lastName, firstName");
             $query->setFetchMode(PDO::FETCH_ASSOC);
@@ -116,7 +116,7 @@ $pageTitle = "Points";
 
                     <?php
                     while($row = $query->fetch()) {
-                        echo "<tr><td>" . $row[firstName]." ".$row[lastName]."</td><td align=\"right\">" . $row[memberPoints] . "</td></tr>";
+                        echo "<tr><td>" . $row['firstName']." ".$row['lastName']."</td><td align=\"right\">" . $row['memberPoints'] . "</td></tr>";
                     }
                     ?>
                     </tbody>
@@ -131,8 +131,8 @@ $pageTitle = "Points";
             $query->setFetchMode(PDO::FETCH_ASSOC);
             $row = $query->fetch();
             ?>
-            <h4 class="m-0"><?php echo (strlen($row[familyName]) > 0) ? $row[familyName] : 'Family 4'; ?> </h4>
-            <p class="text-primary mb-2">Points: <?php echo (isset($row[familyPoints]) ? $row[familyPoints] : '0'); ?></p>
+            <h4 class="m-0"><?php echo (strlen($row['familyName']) > 0) ? $row['familyName'] : 'Family 4'; ?> </h4>
+            <p class="text-primary mb-2">Points: <?php echo (isset($row['familyPoints']) ? $row['familyPoints'] : '0'); ?></p>
             <?php
             $query = $db->query("SELECT firstName, lastName, memberPoints FROM Member WHERE memFamilyID=4 AND status != 'alumni' ORDER BY memberPoints DESC, lastName, firstName");
             $query->setFetchMode(PDO::FETCH_ASSOC);
@@ -147,7 +147,7 @@ $pageTitle = "Points";
 
                     <?php
                     while($row = $query->fetch()) {
-                        echo "<tr><td>" . $row[firstName]." ".$row[lastName]."</td><td align=\"right\">" . $row[memberPoints] . "</td></tr>";
+                        echo "<tr><td>" . $row['firstName']." ".$row['lastName']."</td><td align=\"right\">" . $row['memberPoints'] . "</td></tr>";
                     }
                     ?>
                     </tbody>
@@ -166,8 +166,8 @@ $pageTitle = "Points";
             $query->setFetchMode(PDO::FETCH_ASSOC);
             $row = $query->fetch();
             ?>
-            <h4 class="m-0"><?php echo (strlen($row[familyName]) > 0) ? $row[familyName] : 'Family 5'; ?> </h4>
-            <p class="text-primary mb-2">Points: <?php echo (isset($row[familyPoints]) ? $row[familyPoints] : '0'); ?></p>
+            <h4 class="m-0"><?php echo (strlen($row['familyName']) > 0) ? $row['familyName'] : 'Family 5'; ?> </h4>
+            <p class="text-primary mb-2">Points: <?php echo (isset($row['familyPoints']) ? $row['familyPoints'] : '0'); ?></p>
             <?php
             $query = $db->query("SELECT firstName, lastName, memberPoints FROM Member WHERE memFamilyID=5 AND status != 'alumni' ORDER BY memberPoints DESC, lastName, firstName");
             $query->setFetchMode(PDO::FETCH_ASSOC);
@@ -182,7 +182,7 @@ $pageTitle = "Points";
 
                     <?php
                     while($row = $query->fetch()) {
-                        echo "<tr><td>" . $row[firstName]." ".$row[lastName]."</td><td align=\"right\">" . $row[memberPoints] . "</td></tr>";
+                        echo "<tr><td>" . $row['firstName']." ".$row['lastName']."</td><td align=\"right\">" . $row['memberPoints'] . "</td></tr>";
 
                     }
                     ?>
@@ -198,8 +198,8 @@ $pageTitle = "Points";
             $query->setFetchMode(PDO::FETCH_ASSOC);
             $row = $query->fetch();
             ?>
-            <h4 class="m-0"><?php echo (strlen($row[familyName]) > 0) ? $row[familyName] : 'Family 6'; ?> </h4>
-            <p class="text-primary mb-2">Points: <?php echo (isset($row[familyPoints]) ? $row[familyPoints] : '0'); ?></p>
+            <h4 class="m-0"><?php echo (strlen($row['familyName']) > 0) ? $row['familyName'] : 'Family 6'; ?> </h4>
+            <p class="text-primary mb-2">Points: <?php echo (isset($row['familyPoints']) ? $row['familyPoints'] : '0'); ?></p>
             <?php
             $query = $db->query("SELECT firstName, lastName, memberPoints FROM Member WHERE memFamilyID=6 AND status != 'alumni' ORDER BY memberPoints DESC, lastName, firstName");
             $query->setFetchMode(PDO::FETCH_ASSOC);
@@ -214,7 +214,7 @@ $pageTitle = "Points";
 
                     <?php
                     while($row = $query->fetch()) {
-                        echo "<tr><td>" . $row[firstName]." ".$row[lastName]."</td><td align=\"right\">" . $row[memberPoints] . "</td></tr>";
+                        echo "<tr><td>" . $row['firstName']." ".$row['lastName']."</td><td align=\"right\">" . $row['memberPoints'] . "</td></tr>";
                     }
                     ?>
                     </tbody>
@@ -232,8 +232,8 @@ $pageTitle = "Points";
             $query->setFetchMode(PDO::FETCH_ASSOC);
             $row = $query->fetch();
             ?>
-            <h4 class="m-0"><?php echo (strlen($row[familyName]) > 0) ? $row[familyName] : 'Family 7'; ?> </h4>
-            <p class="text-primary mb-2">Points: <?php echo (isset($row[familyPoints]) ? $row[familyPoints] : '0'); ?></p>
+            <h4 class="m-0"><?php echo (strlen($row['familyName']) > 0) ? $row['familyName'] : 'Family 7'; ?> </h4>
+            <p class="text-primary mb-2">Points: <?php echo (isset($row['familyPoints']) ? $row['familyPoints'] : '0'); ?></p>
             <?php
             $query = $db->query("SELECT firstName, lastName, memberPoints FROM Member WHERE memFamilyID=7 AND status != 'alumni' ORDER BY memberPoints DESC, lastName, firstName");
             $query->setFetchMode(PDO::FETCH_ASSOC);
@@ -248,7 +248,7 @@ $pageTitle = "Points";
 
                     <?php
                     while($row = $query->fetch()) {
-                        echo "<tr><td>" . $row[firstName]." ".$row[lastName]."</td><td align=\"right\">" . $row[memberPoints] . "</td></tr>";
+                        echo "<tr><td>" . $row['firstName']." ".$row['lastName']."</td><td align=\"right\">" . $row['memberPoints'] . "</td></tr>";
 
                     }
                     ?>
@@ -264,8 +264,8 @@ $pageTitle = "Points";
             $query->setFetchMode(PDO::FETCH_ASSOC);
             $row = $query->fetch();
             ?>
-            <h4 class="m-0"><?php echo (strlen($row[familyName]) > 0) ? $row[familyName] : 'Family 8'; ?> </h4>
-            <p class="text-primary mb-2">Points: <?php echo (isset($row[familyPoints]) ? $row[familyPoints] : '0'); ?></p>
+            <h4 class="m-0"><?php echo (strlen($row['familyName']) > 0) ? $row['familyName'] : 'Family 8'; ?> </h4>
+            <p class="text-primary mb-2">Points: <?php echo (isset($row['familyPoints']) ? $row['familyPoints'] : '0'); ?></p>
             <?php
             $query = $db->query("SELECT firstName, lastName, memberPoints FROM Member WHERE memFamilyID=8 AND status != 'alumni' ORDER BY memberPoints DESC, lastName, firstName");
             $query->setFetchMode(PDO::FETCH_ASSOC);
@@ -280,7 +280,7 @@ $pageTitle = "Points";
 
                     <?php
                     while($row = $query->fetch()) {
-                        echo "<tr><td>" . $row[firstName]." ".$row[lastName]."</td><td align=\"right\">" . $row[memberPoints] . "</td></tr>";
+                        echo "<tr><td>" . $row['firstName']." ".$row['lastName']."</td><td align=\"right\">" . $row['memberPoints'] . "</td></tr>";
                     }
                     ?>
                     </tbody>
@@ -299,72 +299,72 @@ $pageTitle = "Points";
 //        $query = $db->query("SELECT familyName FROM Family WHERE familyID=1");
 //        $query->setFetchMode(PDO::FETCH_ASSOC);
 //        $row = $query->fetch();
-//        echo $row[familyName];
+//        echo $row['familyName'];
 //        echo "</th><th>Points</th><th width=300>";
 //        $query = $db->query("SELECT familyName FROM Family WHERE familyID=3");
 //        $query->setFetchMode(PDO::FETCH_ASSOC);
 //        $row = $query->fetch();
-//        echo $row[familyName];
+//        echo $row['familyName'];
 //        echo "</th><th>Points</th></tr>";
 //        echo "<tr><td>";
 //        $query = $db->query("SELECT firstName, lastName, memberPoints FROM Member WHERE memFamilyID=1 AND status != 'alumni' ORDER BY memberPoints DESC, lastName, firstName");
 //        $query->setFetchMode(PDO::FETCH_ASSOC);
 //        while($row = $query->fetch()) {
-//            echo $row[firstName]." ".$row[lastName]."<br>";
+//            echo $row['firstName']." ".$row['lastName']."<br>";
 //        }
 //        echo "</td><td>";
 //        $query = $db->query("SELECT firstName, lastName, memberPoints FROM Member WHERE memFamilyID=1 AND status != 'alumni' ORDER BY memberPoints DESC, lastName, firstName");
 //        $query->setFetchMode(PDO::FETCH_ASSOC);
 //        while($row = $query->fetch()) {
-//            echo $row[memberPoints]."<br>";
+//            echo $row['memberPoints']."<br>";
 //        }
 //        echo "</td><td>";
 //        $query = $db->query("SELECT firstName, lastName, memberPoints FROM Member WHERE memFamilyID=3 AND status != 'alumni' ORDER BY memberPoints DESC, lastName, firstName");
 //        $query->setFetchMode(PDO::FETCH_ASSOC);
 //        while($row = $query->fetch()) {
-//            echo $row[firstName]." ".$row[lastName]."<br>";
+//            echo $row['firstName']." ".$row['lastName']."<br>";
 //        }
 //        echo "</td><td>";
 //        $query = $db->query("SELECT firstName, lastName, memberPoints FROM Member WHERE memFamilyID=3 AND status != 'alumni' ORDER BY memberPoints DESC, lastName, firstName");
 //        $query->setFetchMode(PDO::FETCH_ASSOC);
 //        while($row = $query->fetch()) {
-//            echo $row[memberPoints]."<br>";
+//            echo $row['memberPoints']."<br>";
 //        }
 //        echo "</td></tr>";
 //        echo "<tr bgcolor=\"#b3a369\"><th>";
 //        $query = $db->query("SELECT familyName FROM Family WHERE familyID=2");
 //        $query->setFetchMode(PDO::FETCH_ASSOC);
 //        $row = $query->fetch();
-//        echo $row[familyName];
+//        echo $row['familyName'];
 //        echo "</th><th>Points</th><th>";
 //        $query = $db->query("SELECT familyName FROM Family WHERE familyID=4");
 //        $query->setFetchMode(PDO::FETCH_ASSOC);
 //        $row = $query->fetch();
-//        echo $row[familyName];
+//        echo $row['familyName'];
 //        echo "</th><th>Points</th></tr>";
 //        echo "<tr><td>";
 //        $query = $db->query("SELECT firstName, lastName, memberPoints FROM Member WHERE memFamilyID=2 AND status != 'alumni' ORDER BY memberPoints DESC, lastName, firstName");
 //        $query->setFetchMode(PDO::FETCH_ASSOC);
 //        while($row = $query->fetch()) {
-//            echo $row[firstName]." ".$row[lastName]."<br>";
+//            echo $row['firstName']." ".$row['lastName']."<br>";
 //        }
 //        echo "</td><td>";
 //        $query = $db->query("SELECT firstName, lastName, memberPoints FROM Member WHERE memFamilyID=2 AND status != 'alumni' ORDER BY memberPoints DESC, lastName, firstName");
 //        $query->setFetchMode(PDO::FETCH_ASSOC);
 //        while($row = $query->fetch()) {
-//            echo $row[memberPoints]."<br>";
+//            echo $row['memberPoints']."<br>";
 //        }
 //        echo "</td><td>";
 //        $query = $db->query("SELECT firstName, lastName, memberPoints FROM Member WHERE memFamilyID=4 AND status != 'alumni' ORDER BY memberPoints DESC, lastName, firstName");
 //        $query->setFetchMode(PDO::FETCH_ASSOC);
 //        while($row = $query->fetch()) {
-//            echo $row[firstName]." ".$row[lastName]."<br>";
+//            echo $row['firstName']." ".$row['lastName']."<br>";
 //        }
 //        echo "</td><td>";
 //        $query = $db->query("SELECT firstName, lastName, memberPoints FROM Member WHERE memFamilyID=4 AND status != 'alumni' ORDER BY memberPoints DESC, lastName, firstName");
 //        $query->setFetchMode(PDO::FETCH_ASSOC);
 //        while($row = $query->fetch()) {
-//            echo $row[memberPoints]."<br>";
+//            echo $row['memberPoints']."<br>";
 //        }
 //        echo "</td></tr>";
 //        ?>

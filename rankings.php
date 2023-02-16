@@ -11,7 +11,7 @@ $pageTitle = "Members";
 <body>
 <?php require "partials/header.php"; ?>
 <?php
-	@$sortBy=$_GET[sortBy];
+	@$sortBy=$_GET['sortBy'];
 	
 	if(isset($sortBy)) {
 	} else {
@@ -76,11 +76,11 @@ $pageTitle = "Members";
                     {
                     echo "<form action=\"allAttended.php\" method=\"POST\">";
                     echo "<tr><th>".$count."</th>";
-                    echo "<td><input class='btn btn-link p-0' type=\"submit\" value=\"".$row[firstName]." ".$row[lastName]."\"></td>";
-//                    echo "<td align='right'>".($row[mandatoryEventCount] + $row[sportsEventCount] + $row[socialEventCount] + $row[workEventCount])."</td>";
-                    echo "<td align=\"right\">".$row[memberPoints]."</td>";
+                    echo "<td><input class='btn btn-link p-0' type=\"submit\" value=\"".$row['firstName']." ".$row['lastName']."\"></td>";
+//                    echo "<td align='right'>".($row['mandatoryEventCount'] + $row['sportsEventCount'] + $row['socialEventCount'] + $row['workEventCount'])."</td>";
+                    echo "<td align=\"right\">".$row['memberPoints']."</td>";
 //                    echo "<td align=\"right\"><input class='btn btn-link' type=\"submit\" value=\"Check Events\"></td></tr>";
-                    echo "<input type=\"hidden\" name=\"memberID\" value=\"".$row[memberID]."\">";
+                    echo "<input type=\"hidden\" name=\"memberID\" value=\"".$row['memberID']."\">";
                     echo "</form>";
                     $count++;
                     }

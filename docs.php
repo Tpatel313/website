@@ -39,12 +39,12 @@
                     </tr>
 					<?php
 						while($row = $query->fetch()){
-							$name = $row[Name];
-							$url = $row[URL];
-							$sql_date = $row[Date];
+							$name = $row['Name'];
+							$url = $row['URL'];
+							$sql_date = $row['Date'];
 							$date = date("m/d/Y",strtotime($sql_date));
-							$user = $row[User];
-							$type = $row[Type];
+							$user = $row['User'];
+							$type = $row['Type'];
 							echo "<tr class=\"docsListRows\">";
 							echo "<td class=\"".$type." docsIcon\"></td>";
 							echo "<td class=\"docsListRows docsName\"><a href=\"".$url."\">".$name."</a></td>";

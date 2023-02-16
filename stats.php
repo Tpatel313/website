@@ -48,7 +48,7 @@
         $query = $db->query("SELECT AVG(memberPoints) as AVRG FROM Member WHERE status IN ('probate', 'member')");
         $query->setFetchMode(PDO::FETCH_ASSOC);
         $row = $query->fetch();
-        $pointAVG = number_format($row[AVRG],2);
+        $pointAVG = number_format($row['AVRG'],2);
 
         $query = $db->query("SELECT firstName, lastName, memberPoints, memberID FROM Member WHERE status!='alumni' ORDER BY memberPoints DESC, lastName");
         $query->setFetchMode(PDO::FETCH_ASSOC);
@@ -57,7 +57,7 @@
 
         while($row = $query->fetch())
         {
-            echo "['".addslashes($row[firstName])."', ".$row[memberPoints].",".$pointAVG."],";
+            echo "['".addslashes($row['firstName'])."', ".$row['memberPoints'].",".$pointAVG."],";
             $count++;
         }
         ?>
@@ -79,8 +79,8 @@
 
         while($row = $query->fetch())
         {
-            echo "['".addslashes($row[firstName]),"',";
-            echo "".$row[mandatoryEventCount].", ".$row[socialEventCount].", ".$row[sportsEventCount].", ".$row[workEventCount]."],";
+            echo "['".addslashes($row['firstName']),"',";
+            echo "".$row['mandatoryEventCount'].", ".$row['socialEventCount'].", ".$row['sportsEventCount'].", ".$row['workEventCount']."],";
             $count++;
         }
         ?>

@@ -23,9 +23,9 @@ $count1 = 0;
 
 while($row = $rank_query->fetch()) {
     $count1++;
-    if($row[memberID] == $memberID) {
+    if($row['memberID'] == $memberID) {
         $rank = $count1;
-        $pts = $row[memberPoints];
+        $pts = $row['memberPoints'];
     }
 }
 
@@ -69,10 +69,10 @@ while($row = $rank_query->fetch()) {
                     $top5_query->setFetchMode(PDO::FETCH_ASSOC);
 
                     while($row = $top5_query->fetch()){
-                        if ($row[memberID] != $memberID) {
-                            echo "<li class='list-group-item d-flex justify-content-between align-items-center'>". $count . ". " . $row[firstName]." ".$row[lastName]." <span class=\"badge badge-primary badge-pill\">".$row[memberPoints]."</span></li>";
+                        if ($row['memberID'] != $memberID) {
+                            echo "<li class='list-group-item d-flex justify-content-between align-items-center'>". $count . ". " . $row['firstName']." ".$row['lastName']." <span class=\"badge badge-primary badge-pill\">".$row['memberPoints']."</span></li>";
                         } else {
-                            echo "<li class='list-group-item active d-flex justify-content-between align-items-center'>". $count . ". " . $row[firstName]." ".$row[lastName]." <span class=\"badge badge-light badge-pill\" style='color:#b3a369;'>".$row[memberPoints]."</span></li>";
+                            echo "<li class='list-group-item active d-flex justify-content-between align-items-center'>". $count . ". " . $row['firstName']." ".$row['lastName']." <span class=\"badge badge-light badge-pill\" style='color:#b3a369;'>".$row['memberPoints']."</span></li>";
                         }
                         $count++;
                     }
@@ -94,7 +94,7 @@ while($row = $rank_query->fetch()) {
                 $var = 1;
 
                 while($row = $family_query->fetch()){
-                    echo "<li class='list-group-item d-flex justify-content-between align-items-center'>". $var . ". " . $row[familyName]. " <span class=\"badge badge-primary badge-pill\">".$row[familyPoints]."</span></li>";
+                    echo "<li class='list-group-item d-flex justify-content-between align-items-center'>". $var . ". " . $row['familyName']. " <span class=\"badge badge-primary badge-pill\">".$row['familyPoints']."</span></li>";
                     $var++;
                 }
                 ?>
@@ -118,9 +118,9 @@ while($row = $rank_query->fetch()) {
                 <tbody>
                 <?php
                 $today = getdate();
-                $currentday = $today[mday];
-                $currentmonth = $today[mon];
-                $currentyear = $today[year];
+                $currentday = $today['mday'];
+                $currentmonth = $today['mon'];
+                $currentyear = $today['year'];
 
                 $events_query = $db->query("SELECT * FROM Event WHERE isFamilyEvent = '0' AND STR_TO_DATE(CONCAT(dateMonth,'/',dateDay,'/',dateYear ),'%m/%d/%Y') <= STR_TO_DATE(CONCAT($currentmonth,'/',$currentday,'/',$currentyear ),'%m/%d/%Y') ORDER BY dateMonth DESC, dateDay DESC, eventName LIMIT 0, 10");
                 $events_query->setFetchMode(PDO::FETCH_ASSOC);
@@ -132,36 +132,36 @@ while($row = $rank_query->fetch()) {
                     echo "There are currently no events.";
                 } else {
                     while($row = $events_query->fetch()){
-                        $tempEventID = $row[eventID];
+                        $tempEventID = $row['eventID'];
                         $attends_query = $db->query("SELECT * FROM AttendsEvent WHERE eventID = $tempEventID AND memberID = $memberID");
                         $attends_query->setFetchMode(PDO::FETCH_ASSOC);
                         $num_results3 = $attends_query->rowCount();
-                        echo "<tr id=\"event-" . $row[eventID] ."\">";
+                        echo "<tr id=\"event-" . $row['eventID'] ."\">";
                         echo "<th scope='row'><input id=\"event".$count."\" class='event-checkbox' type=\"checkbox\" name=\"";
-                        echo $row[eventID];
+                        echo $row['eventID'];
                         echo "\" ";
                         if($num_results3 == 1) {
                             echo " CHECKED";
                         } else { }
                         echo "></th><label for=\"event".$count."\"></label>";
-                        echo "<td>".$row[dateMonth]."-".$row[dateDay]."</td><td><a href='/event.php?id=". $row[eventID]."'>".$row[eventName] . "</a>";
-                        if($row[isBonus] == 1) {
+                        echo "<td>".$row['dateMonth']."-".$row['dateDay']."</td><td><a href='/event.php?id=". $row['eventID']."'>".$row['eventName'] . "</a>";
+                        if($row['isBonus'] == 1) {
                             echo " <span class=\"text-muted\">(BONUS)</span>";
                         } else { }
                         $typeClass = '';
-                        if ($row[type] == 'mandatory') {
+                        if ($row['type'] == 'mandatory') {
                             $typeClass = 'event-type-mandatory';
-                        } else if ($row[type] == 'sports') {
+                        } else if ($row['type'] == 'sports') {
                             $typeClass = 'event-type-sports';
-                        } else if ($row[type] == 'social') {
+                        } else if ($row['type'] == 'social') {
                             $typeClass = 'event-type-social';
-                        } else if ($row[type] == 'work') {
+                        } else if ($row['type'] == 'work') {
                             $typeClass = 'event-type-work';
                         } else {
                             $typeClass = '';
                         }
-                        echo " <span class=\"badge badge-primary " . $typeClass ."\">" . $row[type] ."</span></td>";
-                        echo "</div><td align='right'>".$row[pointValue]."</td></tr>";
+                        echo " <span class=\"badge badge-primary " . $typeClass ."\">" . $row['type'] ."</span></td>";
+                        echo "</div><td align='right'>".$row['pointValue']."</td></tr>";
                         $count++;
                     }
                     echo "<input type=\"hidden\" name=\"query_bound\" value=\"recent\">";

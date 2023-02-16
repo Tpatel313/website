@@ -1,6 +1,6 @@
 <?php
 	require "logged_in_check.php";
-	if ($_SESSION['isAdmin']==0 && $_SESSION[isVP]==0) {
+	if ($_SESSION['isAdmin']==0 && $_SESSION['isVP']==0) {
 		echo "<meta http-equiv=\"REFRESH\" content=\"0;url=points.php\">";
 		die;
 	} else {}
@@ -78,7 +78,7 @@
 								$query = $db->query("SELECT familyName FROM Family WHERE familyID=1");
 									$query->setFetchMode(PDO::FETCH_ASSOC);
 								$row = $query->fetch();
-								echo "<input type=\"text\" width=\"250\" name=\"family1name\" value=\"".$row[familyName]."\">";
+								echo "<input type=\"text\" width=\"250\" name=\"family1name\" value=\"".$row['familyName']."\">";
 							?>	
 						</td>	
 					</tr>
@@ -88,7 +88,7 @@
 								$query = $db->query("SELECT * FROM Member WHERE memFamilyID = 1 AND status!='alumni' ORDER BY lastName, firstName");
 									$query->setFetchMode(PDO::FETCH_ASSOC);
 					      		while($row = $query->fetch()) {
-					      			echo "<option value=\"".$row[memberID]."\">".$row[firstName]." ".$row[lastName]."</option>";
+					      			echo "<option value=\"".$row['memberID']."\">".$row['firstName']." ".$row['lastName']."</option>";
 					      		}								
 							?>
 						</select></td>
@@ -99,7 +99,7 @@
 								$query = $db->query("SELECT familyName FROM Family WHERE familyID=2");
 									$query->setFetchMode(PDO::FETCH_ASSOC);
 								$row = $query->fetch();
-								echo "<input type=\"text\" width=\"250\" name=\"family2name\" value=\"".$row[familyName]."\">";
+								echo "<input type=\"text\" width=\"250\" name=\"family2name\" value=\"".$row['familyName']."\">";
 							?>	
 						</td>	
 					</tr>
@@ -109,7 +109,7 @@
 								$query = $db->query("SELECT * FROM Member WHERE memFamilyID = 2 AND status!='alumni' ORDER BY lastName, firstName");
 									$query->setFetchMode(PDO::FETCH_ASSOC);
 					      		while($row = $query->fetch()) {
-					      			echo "<option value=\"".$row[memberID]."\">".$row[firstName]." ".$row[lastName]."</option>";
+					      			echo "<option value=\"".$row['memberID']."\">".$row['firstName']." ".$row['lastName']."</option>";
 					      		}								
 							?>
 						</select></td>
@@ -148,7 +148,7 @@
 								$query = $db->query("SELECT * FROM Member WHERE memFamilyID IS NULL AND status!='alumni' ORDER BY lastName, firstName");
 									$query->setFetchMode(PDO::FETCH_ASSOC);
 					      		while($row = $query->fetch()) {
-					      			echo "<option value=\"".$row[memberID]."\">".$row[firstName]." ".$row[lastName]."</option>";
+					      			echo "<option value=\"".$row['memberID']."\">".$row['firstName']." ".$row['lastName']."</option>";
 					      		}
 							?>
 						</select></td>
@@ -187,7 +187,7 @@
 								$query = $db->query("SELECT familyName FROM Family WHERE familyID=3");
 									$query->setFetchMode(PDO::FETCH_ASSOC);
 								$row = $query->fetch();
-								echo "<input type=\"text\" width=\"250\" name=\"family3name\" value=\"".$row[familyName]."\">";
+								echo "<input type=\"text\" width=\"250\" name=\"family3name\" value=\"".$row['familyName']."\">";
 							?>	
 						</td>	
 					</tr>
@@ -197,7 +197,7 @@
 								$query = $db->query("SELECT * FROM Member WHERE memFamilyID = 3 AND status!='alumni' ORDER BY lastName, firstName");
 									$query->setFetchMode(PDO::FETCH_ASSOC);
 					      		while($row = $query->fetch()) {
-					      			echo "<option value=\"".$row[memberID]."\">".$row[firstName]." ".$row[lastName]."</option>";
+					      			echo "<option value=\"".$row['memberID']."\">".$row['firstName']." ".$row['lastName']."</option>";
 					      		}								
 							?>
 						</select></td>
@@ -208,7 +208,7 @@
 								$query = $db->query("SELECT familyName FROM Family WHERE familyID=4");
 									$query->setFetchMode(PDO::FETCH_ASSOC);
 								$row = $query->fetch();
-								echo "<input type=\"text\" width=\"250\" name=\"family4name\" value=\"".$row[familyName]."\">";
+								echo "<input type=\"text\" width=\"250\" name=\"family4name\" value=\"".$row['familyName']."\">";
 							?>	
 						</td>	
 					</tr>
@@ -218,7 +218,7 @@
 								$query = $db->query("SELECT * FROM Member WHERE memFamilyID = 4 AND status!='alumni' ORDER BY lastName, firstName");
 									$query->setFetchMode(PDO::FETCH_ASSOC);
 					      		while($row = $query->fetch()) {
-					      			echo "<option value=\"".$row[memberID]."\">".$row[firstName]." ".$row[lastName]."</option>";
+					      			echo "<option value=\"".$row['memberID']."\">".$row['firstName']." ".$row['lastName']."</option>";
 					      		}								
 							?>
 						</select></td>

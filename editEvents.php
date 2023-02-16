@@ -12,15 +12,15 @@
 
 <?php
 	$today = getdate();
-	$currentday = $today[mday];
-	$currentmonth = $today[mon];
-	$currentyear = $today[year];
+	$currentday = $today['mday'];
+	$currentmonth = $today['mon'];
+	$currentyear = $today['year'];
 	
-	@$dateMonth=$_GET[dateMonth];
-	@$dateDay=$_GET[dateDay];
-	@$eventID=$_GET[eventID];
-	@$familyEvent=$_GET[familyEvent];    
-	@$isFamilyEvent=$_GET[isFamilyEvent];                  
+	@$dateMonth=$_GET['dateMonth'];
+	@$dateDay=$_GET['dateDay'];
+	@$eventID=$_GET['eventID'];
+	@$familyEvent=$_GET['familyEvent'];    
+	@$isFamilyEvent=$_GET['isFamilyEvent'];                  
 	
 	if(isset($dateMonth)) {
 	     $selectedMonth = $dateMonth;
@@ -37,7 +37,7 @@
 		$query->execute(array('eventID'=>$eventID));
 			$query->setFetchMode(PDO::FETCH_ASSOC);
 		 while($row = $query->fetch()) {
-		 		if($row[dateDay]==$selectedDay && $row[dateMonth]==$selectedMonth){
+		 		if($row['dateDay']==$selectedDay && $row['dateMonth']==$selectedMonth){
 		 				$selectedEvent = $eventID;
 		 		} else {
 		 				$selectedEvent = "none";
@@ -48,7 +48,7 @@
 		$query->execute(array('eventID'=>$eventID));
 			$query->setFetchMode(PDO::FETCH_ASSOC);
 		 while($row = $query->fetch()) {
-		 		if($row[dateMonth]==$selectedMonth){
+		 		if($row['dateMonth']==$selectedMonth){
 		 				$selectedEvent = $eventID;
 		 		} else {
 		 				$selectedEvent = "none";
@@ -296,9 +296,9 @@
                                 $query->setFetchMode(PDO::FETCH_ASSOC);
                                 while($row = $query->fetch()) {
                                     echo "<option value=\"";
-                                    echo $row[eventID];
+                                    echo $row['eventID'];
                                     echo "\"";
-                                    echo ">".$row[eventName]."</option>";
+                                    echo ">".$row['eventName']."</option>";
                                 }
                             } elseif($selectedDay == 0) {
                                 $query = $db->prepare("SELECT * FROM Event WHERE dateMonth=:selectedMonth ORDER BY dateDay");
@@ -306,9 +306,9 @@
                                 $query->setFetchMode(PDO::FETCH_ASSOC);
                                 while($row = $query->fetch()) {
                                     echo "<option value=\"";
-                                    echo $row[eventID];
+                                    echo $row['eventID'];
                                     echo "\"";
-                                    echo ">".$row[eventName]." (".$row[dateMonth]."-".$row[dateDay].")</option>";
+                                    echo ">".$row['eventName']." (".$row['dateMonth']."-".$row['dateDay'].")</option>";
                                 }
                             }
                             ?>
@@ -406,9 +406,9 @@
                             $query->setFetchMode(PDO::FETCH_ASSOC);
                             while($row = $query->fetch()) {
                                 echo "<option value=\"";
-                                echo $row[eventID];
+                                echo $row['eventID'];
                                 echo "\"";
-                                echo ">".$row[eventName]."</option>";
+                                echo ">".$row['eventName']."</option>";
                             }
                         } elseif($selectedDay == 0) {
                             $query = $db->prepare("SELECT * FROM Event WHERE dateMonth=:selectedMonth ORDER BY dateDay");
@@ -416,9 +416,9 @@
                             $query->setFetchMode(PDO::FETCH_ASSOC);
                             while($row = $query->fetch()) {
                                 echo "<option value=\"";
-                                echo $row[eventID];
+                                echo $row['eventID'];
                                 echo "\"";
-                                echo ">".$row[eventName]." (".$row[dateMonth]."-".$row[dateDay].")</option>";
+                                echo ">".$row['eventName']." (".$row['dateMonth']."-".$row['dateDay'].")</option>";
                             }
                         }
                         ?>

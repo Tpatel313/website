@@ -31,7 +31,7 @@
       <select class='form-control custom-select' name=\"event\">";
             echo "<option value=\"none\">---</option>";
             while($row = $query3->fetch()) {
-                echo "<option value=".$row[eventID].">".$row[eventName]." (".$row[dateMonth]."-".$row[dateDay].")</option>";
+                echo "<option value=".$row['eventID'].">".$row['eventName']." (".$row['dateMonth']."-".$row['dateDay'].")</option>";
 			}
       echo "</select>
     </div>
@@ -40,7 +40,7 @@
       <select class='form-control custom-select' name=\"family\">";
             echo "<option value=\"none\">---</option>";
             while($row = $query2->fetch()) {
-				echo "<option value=".$row[familyID].">".$row[familyName]."</option>";
+				echo "<option value=".$row['familyID'].">".$row['familyName']."</option>";
 			}
       echo "</select>
     </div>
@@ -66,13 +66,13 @@
         echo "<tbody>";
         while ($row2 = $query->fetch())  {
             echo "<tr>";
-			echo "<td align='left'>".$row2[eventName];
-			if($row2[isBonus] == 1) {
+			echo "<td align='left'>".$row2['eventName'];
+			if($row2['isBonus'] == 1) {
 				echo " (BONUS)";
 			} else { }
 			echo"</td>";
-			echo "<td align='center'>".$row2[dateMonth]."/".$row2[dateDay]."/".$row2[dateYear]."</td>";
-			echo "<td align='center'>". ((strlen($row2[familyName]) > 0) ? $row2[familyName] : '<em class="text-muted">Family not assigned</em>') ."</td><td align='right'>".$row2[pointValue]."</td>";
+			echo "<td align='center'>".$row2['dateMonth']."/".$row2['dateDay']."/".$row2['dateYear']."</td>";
+			echo "<td align='center'>". ((strlen($row2['familyName']) > 0) ? $row2['familyName'] : '<em class="text-muted">Family not assigned</em>') ."</td><td align='right'>".$row2['pointValue']."</td>";
 			echo "</tr>";
 		}
         echo "</tbody>";
