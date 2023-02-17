@@ -82,7 +82,7 @@ while ($row = $peopleQuery->fetch()) {
             <table class="table table-hover table-sm mb-3">
                 <?php
                     $sortedKeys = arsort($memberCountArray);
-                    if (sizeof($sortedKeys) > 0) {
+                    if (sizeof($memberCountArray) > 0) {
                         echo "<thead><tr><th>Rank</th><th>Member</th><th>% Events Shared</th></tr></thead>";
                         echo "<tbody>";
                         $count = 1;
