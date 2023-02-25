@@ -3,9 +3,10 @@
 	require "set_session_vars_short.php";
 	require "database_connect.php";
 
-    $month=$_POST['dateMonth'];
+    $month=isset($_POST['dateMonth']) ? $_POST['dateMonth'] : '';
+    //$month=$_POST['dateMonth'];
     if($month=='' || !isset($month)){
-        $month=date(m);
+        $month=date('m');
     }
     if($month=='01'){$monthName='January';}
     if($month=='02'){$monthName='February';}
