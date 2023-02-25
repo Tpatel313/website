@@ -11,54 +11,54 @@
 
 <div align="center">
 <a href="rankings.php">Back to Individual Rankings</a><br/><br/>
-<a href="/friends.php?memberId=<?php echo $_POST[memberID]; ?>">Friends List</a><br/><br/>
-<a href="/memberProfile.php?memberId=<?php echo $_POST[memberID]; ?>">View Profile</a>
+<a href="/friends.php?memberId=<?php echo $_POST['memberID']; ?>">Friends List</a><br/><br/>
+<a href="/memberProfile.php?memberId=<?php echo $_POST['memberID']; ?>">View Profile</a>
 </div><br/>
 
 <?php
 	// SHOW SELECTED USER'S NAME
 	//-------------------------------------------
 
-	$currentMemID = $_POST[memberID];
+	$currentMemID = $_POST['memberID'];
 
    	$query = $db->prepare("SELECT firstName, lastName, memberPoints, status FROM Member WHERE memberID=:currentMemID");
 	$query->execute(array('currentMemID'=>$currentMemID));
 		$query->setFetchMode(PDO::FETCH_ASSOC);
 
 	$row = $query->fetch();
-	$currentFirstName = $row[firstName];
-	$currentLastName = $row[lastName];
-	$currentMemberPoints = $row[memberPoints];
-	$currentMemberStatus = $row[status];
+	$currentFirstName = $row['firstName'];
+	$currentLastName = $row['lastName'];
+	$currentMemberPoints = $row['memberPoints'];
+	$currentMemberStatus = $row['status'];
 
 	// Total number of events
 	//-------------------------------------------
 	$query = $db->query("SELECT COUNT(*) as CNT FROM Event");
 		$query->setFetchMode(PDO::FETCH_ASSOC);
 	$row = $query->fetch();
-	$totalEvents = $row[CNT];
+	$totalEvents = $row['CNT'];
 
 	// Total number of events
 	//-------------------------------------------
 	$query = $db->query("SELECT STDDEV(memberPoints) as STD, AVG(memberPoints) as AVRG FROM Member WHERE status IN ('probate', 'member')");
 		$query->setFetchMode(PDO::FETCH_ASSOC);
 	$row = $query->fetch();
-	$pointAVG = number_format($row[AVRG],2);
-	$pointSTD = number_format($row[STD],2);
+	$pointAVG = number_format($row['AVRG'],2);
+	$pointSTD = number_format($row['STD'],2);
 
 	// Probate Average
 	//-------------------------------------------
 	$query = $db->query("SELECT AVG(memberPoints) as AVRG FROM Member WHERE status = 'probate'");
 		$query->setFetchMode(PDO::FETCH_ASSOC);
 	$row = $query->fetch();
-	$probateAVG = number_format($row[AVRG],2);
+	$probateAVG = number_format($row['AVRG'],2);
 
 	// Member Average
 	//-------------------------------------------
 	$query = $db->query("SELECT AVG(memberPoints) as AVRG FROM Member WHERE status = 'member'");
 		$query->setFetchMode(PDO::FETCH_ASSOC);
 	$row = $query->fetch();
-	$memberAVG = number_format($row[AVRG],2);
+	$memberAVG = number_format($row['AVRG'],2);
 
 	// SHOW ALL ATTENDED EVENTS FOR THE SELECTED USER
 	//-----------------------------------------------
@@ -78,16 +78,16 @@
 
 	while($row = $query->fetch()) {
 		$events++;
-		if($row[type]=='mandatory'){
+		if($row['type']=='mandatory'){
 			$mandatory++;
 		}
-		else if($row[type]=='sports'){
+		else if($row['type']=='sports'){
 			$sports++;
 		}
-		else if($row[type]=='social'){
+		else if($row['type']=='social'){
 			$social++;
 		}
-		else if($row[type]=='work'){
+		else if($row['type']=='work'){
 			$work++;
 		}
 	}
@@ -97,7 +97,7 @@
     $query = $db->query("SELECT COUNT(*) as CNT FROM Event where type = 'mandatory'");
     $query->setFetchMode(PDO::FETCH_ASSOC);
     $row = $query->fetch();
-    $mandatoryEvents = $row[CNT];
+    $mandatoryEvents = $row['CNT'];
 ?>
 	<script type="text/javascript">
       // Load the Visualization API and the piechart package.
@@ -152,15 +152,15 @@
 
 			while($row = $query2->fetch())
 			{
-				if($dateDay!=$row[dateDay] || $dateMonth!=$row[dateMonth]){
-				    $dateYear=$row[dateYear];
-					$dateMonth=$row[dateMonth];
-					$dateDay=$row[dateDay];
-					$pointValue+=$row[pointValue];
-					echo "[new Date(" . $dateYear .", ".($row[dateMonth]-1).", ".$row[dateDay]."), ".$pointValue."],";
+				if($dateDay!=$row['dateDay'] || $dateMonth!=$row['dateMonth']){
+				    $dateYear=$row['dateYear'];
+					$dateMonth=$row['dateMonth'];
+					$dateDay=$row['dateDay'];
+					$pointValue+=$row['pointValue'];
+					echo "[new Date(" . $dateYear .", ".($row['dateMonth']-1).", ".$row['dateDay']."), ".$pointValue."],";
 				}
 				else{
-					$pointValue+=$row[pointValue];
+					$pointValue+=$row['pointValue'];
 				}
 
 			}
@@ -225,7 +225,7 @@
 
 	while($row = $query2->fetch())
 		{
-		echo "<tr><td>".$row[eventName]."</td><td>".$row[dateMonth]."-".$row[dateDay]."-".$row[dateYear]."</td><td>".$row[pointValue]."</td></tr>";
+		echo "<tr><td>".$row['eventName']."</td><td>".$row['dateMonth']."-".$row['dateDay']."-".$row['dateYear']."</td><td>".$row['pointValue']."</td></tr>";
 		}
 ?>
     </table>

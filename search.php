@@ -65,7 +65,7 @@ function reload(form){
 
 				echo "<table align=\"center\"><tr><td colspan=\"2\"><u>".$year[0]." PROBATES:</u></td></tr>";
 				foreach ($probates as $p) {
-					echo "<tr><td>".$p[FullName]."</td><td>".$p[email]."</td></tr>";
+					echo "<tr><td>".$p['FullName']."</td><td>".$p['email']."</td></tr>";
 				}
 				echo "</table>";
 			}
@@ -101,7 +101,7 @@ function reload(form){
 
 				echo "<table align=\"center\"><tr><td><u>Year</u></td><td>&nbsp;&nbsp;&nbsp;</td><td><u>Position</u></td><td>&nbsp;&nbsp;&nbsp;</td><td><u>Name</u></td><td>&nbsp;&nbsp;&nbsp;</td><td><u>Email</u></td></tr>";
 				foreach ($positionInfo as $pi) {
-					echo "<tr><td>".$pi[year]."</td><td></td><td>".$pi[positionName]."</td><td></td><td>".$pi[FullName]."</td><td></td><td>".$pi[email]."</td></tr>";
+					echo "<tr><td>".$pi['year']."</td><td></td><td>".$pi['positionName']."</td><td></td><td>".$pi['FullName']."</td><td></td><td>".$pi['email']."</td></tr>";
 				}
 				echo "</table>";
 			} else {
@@ -116,7 +116,7 @@ function reload(form){
 
 				echo "<table align=\"center\"><tr><td><u>Year</u></td><td>&nbsp;&nbsp;&nbsp;</td><td><u>Position</u></td><td>&nbsp;&nbsp;&nbsp;</td><td><u>Name</u></td><td>&nbsp;&nbsp;&nbsp;</td><td><u>Email</u></td></tr>";
 				foreach ($positionInfo as $pi) {
-					echo "<tr><td>".$pi[year]."</td><td></td><td>".$pi[positionName]."</td><td></td><td>".$pi[FullName]."</td><td></td><td>".$pi[email]."</td></tr>";
+					echo "<tr><td>".$pi['year']."</td><td></td><td>".$pi['positionName']."</td><td></td><td>".$pi['FullName']."</td><td></td><td>".$pi['email']."</td></tr>";
 				}
 				echo "</table>";
 			}
@@ -139,7 +139,7 @@ function reload(form){
 
 					echo "<table align=\"center\"><tr><td><u>  Year  </u></td><td><u>  Committee  </u></td><td><u>  Name  </u></td><td><u>  Email  </u></td></tr>";
 					foreach ($committeeInfo as $ci) {
-						echo "<tr><td>".$ci[year]."</td><td>".$ci[committeeName]."</td><td>".$ci[FullName]."</td><td>".$ci[email]."</td></tr>";
+						echo "<tr><td>".$ci['year']."</td><td>".$ci['committeeName']."</td><td>".$ci['FullName']."</td><td>".$ci['email']."</td></tr>";
 					}
 					echo "</table>";
 				} else {
@@ -150,7 +150,7 @@ function reload(form){
 
 					echo "<table align=\"center\"><tr><td><u>  Year  </u></td><td><u>  Committee  </u></td><td><u>  Name  </u></td><td><u>  Email  </u></td></tr>";
 					foreach ($committeeInfo as $ci) {
-						echo "<tr><td>".$ci[year]."</td><td>".$ci[committeeName]."</td><td>".$ci[FullName]."</td><td>".$ci[email]."</td></tr>";
+						echo "<tr><td>".$ci['year']."</td><td>".$ci['committeeName']."</td><td>".$ci['FullName']."</td><td>".$ci['email']."</td></tr>";
 					}
 					echo "</table>";
 				}
@@ -170,7 +170,7 @@ function reload(form){
 							$memberInfo = $query->fetchAll();
 
 							foreach ($memberInfo as $m) {
-								$firstName[] = $m[memberID];
+								$firstName[] = $m['memberID'];
 							}
 						}
 					}
@@ -186,7 +186,7 @@ function reload(form){
 							$memberInfo = $query->fetchAll();
 
 							foreach ($memberInfo as $m) {
-								$lastName[] = $m[memberID];
+								$lastName[] = $m['memberID'];
 							}
 						}
 					}
@@ -205,7 +205,7 @@ function reload(form){
 							$memberName = $query->fetchAll();
 
 							foreach ($memberName as $mName) {
-								echo "<tr><td><a href=\"search.php?q=Profile+".$mName[firstName]."+".$mName[lastName]."\">".$mName[firstName]." ".$mName[lastName]."</a></td></tr>";
+								echo "<tr><td><a href=\"search.php?q=Profile+".$mName['firstName']."+".$mName['lastName']."\">".$mName['firstName']." ".$mName['lastName']."</a></td></tr>";
 							}
 						}
 						echo "</table>";
@@ -234,11 +234,11 @@ function reload(form){
 
 						echo "<table align=\"center\">";
 						foreach ($profileInfo as $pi) {
-							echo "<tr><td colspan=\"5\"><u>The Ramblin' Reck Club Profile of ".$pi[firstName]." ".$pi[lastName]."</u></td></tr>";
+							echo "<tr><td colspan=\"5\"><u>The Ramblin' Reck Club Profile of ".$pi['firstName']." ".$pi['lastName']."</u></td></tr>";
 							echo "<tr><td colspan=\"5\"></td></tr>";
 							echo "<tr><td colspan=\"5\"></td></tr>";
-							echo "<tr><td><b>Email: </b></td><td>".$pi[email]."</td><td>&nbsp&nbsp&nbsp&nbsp</td><td><b>Joined RRC In: </b></td><td>".$pi[joinYear]."</td></tr>";
-							echo "<tr><td><b>Big Recker Pair: </b></td><td>".$pi[rpFirstName]." ".$pi[rpLastName]."</td><td>&nbsp&nbsp&nbsp&nbsp</td><td><b>Graduation Year: </b></td><td>".$pi[gradYear]."</td></tr>";
+							echo "<tr><td><b>Email: </b></td><td>".$pi['email']."</td><td>&nbsp&nbsp&nbsp&nbsp</td><td><b>Joined RRC In: </b></td><td>".$pi['joinYear']."</td></tr>";
+							echo "<tr><td><b>Big Recker Pair: </b></td><td>".$pi['rpFirstName']." ".$pi['rpLastName']."</td><td>&nbsp&nbsp&nbsp&nbsp</td><td><b>Graduation Year: </b></td><td>".$pi['gradYear']."</td></tr>";
 							echo "<tr><td colspan=\"5\"><hr></td></tr>";
 							echo "<tr><td colspan=\"2\" valign=\"top\">";
 								echo "<table>";
@@ -247,7 +247,7 @@ function reload(form){
 									echo "<tr><td colspan=\"2\">&lt;no results&gt;</td></tr>";
 								} else {
 									foreach ($positionInfo as $posi) {
-										echo "<tr><td>".$posi[year]."</td><td>".$posi[positionName]."</td></tr>";
+										echo "<tr><td>".$posi['year']."</td><td>".$posi['positionName']."</td></tr>";
 									}
 								}
 								echo "</table>";
@@ -258,7 +258,7 @@ function reload(form){
 									echo "<tr><td colspan=\"2\">&lt;no results&gt;</td></tr>";
 								} else {
 									foreach ($committeeInfo as $comi) {
-										echo "<tr><td>".$comi[year]."</td><td>".$comi[committeeName]."</td></tr>";
+										echo "<tr><td>".$comi['year']."</td><td>".$comi['committeeName']."</td></tr>";
 									}
 								}
 								echo "</table>";

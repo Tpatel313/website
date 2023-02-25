@@ -3,7 +3,7 @@
 	require "set_session_vars_short.php";
 	require "database_connect.php";
 
-    $month=$_POST[dateMonth];
+    $month=$_POST['dateMonth'];
     if($month=='' || !isset($month)){
         $month=date(m);
     }
@@ -91,36 +91,36 @@ if($month=='all') {
                 <tbody>";
         while($row = $query->fetch())  {
 //			$counter = $counter + 1;
-            $tempEventID = $row[eventID];
+            $tempEventID = $row['eventID'];
             $attends_query = $db->query("SELECT * FROM AttendsEvent WHERE eventID = $tempEventID AND memberID = $memberID");
             $attends_query->setFetchMode(PDO::FETCH_ASSOC);
             $num_results3 = $attends_query->rowCount();
-            echo "<tr id=\"event-" . $row[eventID] ."\">";
+            echo "<tr id=\"event-" . $row['eventID'] ."\">";
             echo "<th scope='row'><input id=\"event".$count."\" class='event-checkbox' type=\"checkbox\" name=\"";
-            echo $row[eventID];
+            echo $row['eventID'];
             echo "\" ";
             if($num_results3 == 1) {
                 echo " CHECKED";
             } else { }
             echo "></th><label for=\"event".$count."\"></label>";
-            echo "<td>".$row[dateMonth]."-".$row[dateDay]."</td><td><a href='/event.php?id=". $row[eventID]."'>".$row[eventName] . "</a>";
-            if($row[isBonus] == 1) {
+            echo "<td>".$row['dateMonth']."-".$row['dateDay']."</td><td><a href='/event.php?id=". $row['eventID']."'>".$row['eventName'] . "</a>";
+            if($row['isBonus'] == 1) {
                 echo " <span class=\"text-muted\">(BONUS)</span>";
             } else { }
             $typeClass = '';
-            if ($row[type] == 'mandatory') {
+            if ($row['type'] == 'mandatory') {
                 $typeClass = 'event-type-mandatory';
-            } else if ($row[type] == 'sports') {
+            } else if ($row['type'] == 'sports') {
                 $typeClass = 'event-type-sports';
-            } else if ($row[type] == 'social') {
+            } else if ($row['type'] == 'social') {
                 $typeClass = 'event-type-social';
-            } else if ($row[type] == 'work') {
+            } else if ($row['type'] == 'work') {
                 $typeClass = 'event-type-work';
             } else {
                 $typeClass = '';
             }
-            echo " <span class=\"badge badge-primary " . $typeClass ."\">" . $row[type] ."</span></td>";
-            echo "</div><td align='right'>".$row[pointValue]."</td></tr>";
+            echo " <span class=\"badge badge-primary " . $typeClass ."\">" . $row['type'] ."</span></td>";
+            echo "</div><td align='right'>".$row['pointValue']."</td></tr>";
             $count++;
             echo "<input type=\"hidden\" name=\"query_bound\" value=\"recent\">";
         }

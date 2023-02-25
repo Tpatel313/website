@@ -7,16 +7,16 @@
 
 <?php
 
-$currentMemID = $_GET[memberId];
+$currentMemID = $_GET['memberId'];
 
 $query = $db->prepare("SELECT firstName, lastName, memberPoints FROM Member WHERE memberID=:currentMemID");
 $query->execute(array('currentMemID'=>$currentMemID));
 $query->setFetchMode(PDO::FETCH_ASSOC);
 
 $row = $query->fetch();
-$currentFirstName = $row[firstName];
-$currentLastName = $row[lastName];
-$currentMemberPoints = $row[memberPoints];
+$currentFirstName = $row['firstName'];
+$currentLastName = $row['lastName'];
+$currentMemberPoints = $row['memberPoints'];
 
 $attendanceQuery = $db->prepare("SELECT eventId from reck_club.AttendsEvent WHERE memberID=:currentMemID");
 $attendanceQuery->execute(array('currentMemID'=>$currentMemID));
@@ -24,7 +24,7 @@ $attendanceQuery->setFetchMode(PDO::FETCH_ASSOC);
 $eventIds = [];
 
 while ($row = $attendanceQuery->fetch()) {
-    $eventIds[] = $row[eventId];
+    $eventIds[] = $row['eventId'];
 }
 
 $eventIdsString = "'".implode("','", $eventIds) . "'";
@@ -35,11 +35,11 @@ $eventGroupsQuery->execute(array('curMemId' => $currentMemID));
 $eventGroupsQuery->setFetchMode(PDO::FETCH_ASSOC);
 $memberEventArray = [];
 while($row = $eventGroupsQuery->fetch()) {
-    if (!key_exists($row[memberID], $memberEventArray) && (!empty($row[memberID]) && isset($row[memberID]) && strlen($row[memberID] > 0) && !is_null($row[memberID]))) {
-        $memberEventArray[$row[memberID]] = [];
+    if (!key_exists($row['memberID'], $memberEventArray) && (!empty($row['memberID']) && isset($row['memberID']) && strlen($row['memberID'] > 0) && !is_null($row['memberID']))) {
+        $memberEventArray[$row['memberID']] = [];
     }
 
-    $memberEventArray[$row[memberID]][] = $row[eventID];
+    $memberEventArray[$row['memberID']][] = $row['eventID'];
 }
 
 $memberCountArray = [];
@@ -55,11 +55,11 @@ $peopleQuery->setFetchMode(PDO::FETCH_ASSOC);
 $people = [];
 
 while ($row = $peopleQuery->fetch()) {
-    if (!key_exists($row[memberID], $people) && (!empty($row[memberID]) && isset($row[memberID]) && strlen($row[memberID] > 0) && !is_null($row[memberID]))) {
-        $people[$row[memberID]] = '';
+    if (!key_exists($row['memberID'], $people) && (!empty($row['memberID']) && isset($row['memberID']) && strlen($row['memberID'] > 0) && !is_null($row['memberID']))) {
+        $people[$row['memberID']] = '';
     }
 
-    $people[$row[memberID]] = $row[firstName] . ' ' . $row[lastName];
+    $people[$row['memberID']] = $row['firstName'] . ' ' . $row['lastName'];
 }
 
 ?>
@@ -82,7 +82,7 @@ while ($row = $peopleQuery->fetch()) {
             <table class="table table-hover table-sm mb-3">
                 <?php
                     $sortedKeys = arsort($memberCountArray);
-                    if (sizeof($sortedKeys) > 0) {
+                    if (sizeof($memberCountArray) > 0) {
                         echo "<thead><tr><th>Rank</th><th>Member</th><th>% Events Shared</th></tr></thead>";
                         echo "<tbody>";
                         $count = 1;

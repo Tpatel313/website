@@ -1,6 +1,6 @@
 <?php
 	require "logged_in_check.php";
-	if ($_SESSION[isAdmin]==0 && $_SESSION[isEventAdmin]==0) {
+	if ($_SESSION['isAdmin']==0 && $_SESSION['isEventAdmin']==0) {
 		echo "<meta http-equiv=\"REFRESH\" content=\"0;url=points.php\">";
 		die;
 	} else {}
@@ -9,7 +9,7 @@
 	require "html_header_begin.txt";
 	require "html_header_end.txt";
 
-	$tempEventID = $_POST[eventID];
+	$tempEventID = $_POST['eventID'];
 	
 	$query = $db->prepare("DELETE FROM Event WHERE eventID=:tempEventID");
 	$query->execute(array('tempEventID'=>$tempEventID));
@@ -22,7 +22,7 @@
 	
 	while($rowMem = $resultMem->fetch()) {
 	
-	    $tempMemberID = $rowMem[memberID];
+	    $tempMemberID = $rowMem['memberID'];
 	    
 		$query = $db->prepare("SELECT pointValue, type FROM AttendsEvent JOIN Event ON AttendsEvent.eventID = Event.eventID WHERE memberID = :tempMemberID");
 		$query->execute(array('tempMemberID'=>$tempMemberID));
@@ -35,21 +35,21 @@
 		$work = 0;
 		
 		while($row = $query->fetch()) {
-			if($row[type]=='mandatory'){
+			if($row['type']=='mandatory'){
 				$mandatory++;
-				$num += $row[pointValue];
+				$num += $row['pointValue'];
 			}
-			else if($row[type]=='sports'){
+			else if($row['type']=='sports'){
 				$sports++;
-				$num += $row[pointValue];
+				$num += $row['pointValue'];
 			}
-			else if($row[type]=='social'){
+			else if($row['type']=='social'){
 				$social++;
-				$num += $row[pointValue];
+				$num += $row['pointValue'];
 			}
-			else if($row[type]=='work'){
+			else if($row['type']=='work'){
 				$work++;
-				$num += $row[pointValue];
+				$num += $row['pointValue'];
 			}		
 		}
 
@@ -69,7 +69,7 @@
 	         
 	while($rowFam = $resultFam->fetch()) {
 	
-	    $tempFamilyID = $rowFam[familyID];
+	    $tempFamilyID = $rowFam['familyID'];
 	    
 	    $famnum = 0;
 	    
@@ -80,7 +80,7 @@
 		$query->execute(array('tempFamilyID'=>$tempFamilyID));
 			$query->setFetchMode(PDO::FETCH_ASSOC);
 		$row = $query->fetch();
-		$famnum = $row[pts];
+		$famnum = $row['pts'];
 					
 	// SET ALL FAMILIES' TOTAL POINTS IN DATABASE
 	// ------------------------------------------

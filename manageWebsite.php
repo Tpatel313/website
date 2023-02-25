@@ -2,7 +2,7 @@
 require "logged_in_check.php";
 require "set_session_vars_full.php";
 require "database_connect.php";
-if ($_SESSION[isAdmin]==0) {
+if ($_SESSION['isAdmin']==0) {
     echo "<meta http-equiv=\"REFRESH\" content=\"0;url=points.php\">";
     die;
 } else {}
@@ -13,7 +13,7 @@ $pageTitle = "Manage Website";
 	$query = $db->query("SELECT DATE_FORMAT(lastBackupDate, '%M %e, %Y %r') AS lastBackup FROM BackupLog;");
 		$query->setFetchMode(PDO::FETCH_ASSOC);
 	$row = $query->fetch();
-	$bkupDate = $row[lastBackup];
+	$bkupDate = $row['lastBackup'];
 	
 	$query = $db->query("SELECT * FROM Member WHERE isAdmin = 1 || isEventAdmin = 1 ORDER BY lastName, firstName");
 		$query->setFetchMode(PDO::FETCH_ASSOC);
@@ -41,8 +41,8 @@ $pageTitle = "Manage Website";
                 <h6><strong>Admins</strong></h6>
                 <?php
                 foreach($admins as $a) {
-                    if($a[isAdmin]==1) {
-                        echo "<p>".$a[firstName]." ".$a[lastName]."</p>";
+                    if($a['isAdmin']==1) {
+                        echo "<p>".$a['firstName']." ".$a['lastName']."</p>";
                     }
                 }
                 ?>
@@ -51,8 +51,8 @@ $pageTitle = "Manage Website";
                 <h6><strong>Event Admins</strong></h6>
                 <?php
                 foreach($admins as $a) {
-                    if($a[isEventAdmin]==1) {
-                        echo "<p>".$a[firstName]." ".$a[lastName]."</p>";
+                    if($a['isEventAdmin']==1) {
+                        echo "<p>".$a['firstName']." ".$a['lastName']."</p>";
                     }
                 }
                 ?>
@@ -63,7 +63,7 @@ $pageTitle = "Manage Website";
                     <option value="none">---</option>
                     <?php
                     foreach($members as $m) {
-                        echo "<option value=\"".$m[memberID]."\">".$m[lastName].", ".$m[firstName]."</option>";
+                        echo "<option value=\"".$m['memberID']."\">".$m['lastName'].", ".$m['firstName']."</option>";
                     }
                     ?>
                 </select>

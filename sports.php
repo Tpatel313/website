@@ -28,12 +28,12 @@ $pageTitle = "Sports Dashboard";
     $query->setFetchMode(PDO::FETCH_ASSOC);
     $sportsEvents = [];
     while ($row = $query->fetch()) {
-        if (!key_exists($row[eventID], $sportsEvents) && (!empty($row[eventID]) && isset($row[eventID]) && strlen($row[eventID] > 0) && !is_null($row[eventID]))) {
-            $sportsEvents[$row[eventID]] = [
-                'name' => $row[eventName],
-                'dateDay' => $row[dateDay],
-                'dateMonth' => $row[dateMonth],
-                'dateYear' => $row[dateYear]
+        if (!key_exists($row['eventID'], $sportsEvents) && (!empty($row['eventID']) && isset($row['eventID']) && strlen($row['eventID'] > 0) && !is_null($row['eventID']))) {
+            $sportsEvents[$row['eventID']] = [
+                'name' => $row['eventName'],
+                'dateDay' => $row['dateDay'],
+                'dateMonth' => $row['dateMonth'],
+                'dateYear' => $row['dateYear']
             ];
         }
     }
@@ -44,11 +44,11 @@ $pageTitle = "Sports Dashboard";
     $eventAttendanceQuery->setFetchMode(PDO::FETCH_ASSOC);
     $eventArray = [];
     while($row = $eventAttendanceQuery->fetch()) {
-        if (!key_exists($row[eventID], $eventArray) && (!empty($row[eventID]) && isset($row[eventID]) && strlen($row[eventID]) > 0 && !is_null($row[eventID]))) {
-            $eventArray[$row[eventID]] = [];
+        if (!key_exists($row['eventID'], $eventArray) && (!empty($row['eventID']) && isset($row['eventID']) && strlen($row['eventID']) > 0 && !is_null($row['eventID']))) {
+            $eventArray[$row['eventID']] = [];
         }
 
-        $eventArray[$row[eventID]][] = $row[memberId];
+        $eventArray[$row['eventID']][] = $row['memberId'];
     }
 
     $eventAttendanceCount = [];
@@ -105,7 +105,7 @@ $pageTitle = "Sports Dashboard";
     $query = $db->query("SELECT COUNT(*) as CNT FROM reck_club.Member WHERE NOT status = 'alumni' AND (NOT username = 'gpburdell' AND NOT username = 'gerome.stephens')"); // remove Gerome and GPB from the member count
     $query->setFetchMode(PDO::FETCH_ASSOC);
     $row = $query->fetch();
-    $totalMembers = $row[CNT];
+    $totalMembers = $row['CNT'];
 
     uasort($sportEventArray, function($a, $b) {
         $aAttendance = 0;

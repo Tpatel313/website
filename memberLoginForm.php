@@ -1,6 +1,6 @@
 <?php
 	// Screw licenses.  This is too trivial.  Use this code any way you want.
-	if(strpos($_SERVER[HTTP_USER_AGENT], 'iPhone') !== FALSE || strpos($_SERVER[HTTP_USER_AGENT], 'iPod') !== FALSE) {
+	if(strpos($_SERVER['HTTP_USER_AGENT'], 'iPhone') !== FALSE || strpos($_SERVER['HTTP_USER_AGENT'], 'iPod') !== FALSE) {
 		//header('Location: http://www.google.com');
 	}
 	

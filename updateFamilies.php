@@ -1,6 +1,6 @@
 <?php
 	require "logged_in_check.php";
-	if ($_SESSION[isAdmin]==0 && $_SESSION[isVP]==0) {
+	if ($_SESSION['isAdmin']==0 && $_SESSION['isVP']==0) {
 		echo "<meta http-equiv=\"REFRESH\" content=\"0;url=points.php\">";
 		die;
 	} else {}
@@ -9,10 +9,10 @@
 	require "html_header_begin.txt";
 	require "html_header_end.txt";
 	
-	$family1name = $_POST[family1name];
-	$family2name = $_POST[family2name];
-	$family3name = $_POST[family3name];
-	$family4name = $_POST[family4name];
+	$family1name = $_POST['family1name'];
+	$family2name = $_POST['family2name'];
+	$family3name = $_POST['family3name'];
+	$family4name = $_POST['family4name'];
 	
 	$query1 = $db->prepare("UPDATE Family SET familyName=:family1name WHERE familyID=1");
 	$query1->execute(array('family1name'=>$family1name));
@@ -23,23 +23,23 @@
 	$query4 = $db->prepare("UPDATE Family SET familyName=:family4name WHERE familyID=4");
 	$query4->execute(array('family4name'=>$family4name));
 
-	foreach ($_POST[SourceSelect] AS $tempMemberID) {
+	foreach ($_POST['SourceSelect'] AS $tempMemberID) {
 		$query = $db->prepare("UPDATE Member SET memFamilyID = NULL WHERE memberID = :tempMemberID");
 		$query->execute(array('tempMemberID'=>$tempMemberID));
 	}
-	foreach ($_POST[Family1Select] AS $tempMemberID) {
+	foreach ($_POST['Family1Select'] AS $tempMemberID) {
 		$query = $db->prepare("UPDATE Member SET memFamilyID = 1 WHERE memberID = :tempMemberID");
 		$query->execute(array('tempMemberID'=>$tempMemberID));
 	}	
-	foreach ($_POST[Family2Select] AS $tempMemberID) {
+	foreach ($_POST['Family2Select'] AS $tempMemberID) {
 		$query = $db->prepare("UPDATE Member SET memFamilyID = 2 WHERE memberID = :tempMemberID");
 		$query->execute(array('tempMemberID'=>$tempMemberID));
 	}	
-	foreach ($_POST[Family3Select] AS $tempMemberID) {
+	foreach ($_POST['Family3Select'] AS $tempMemberID) {
 		$query = $db->prepare("UPDATE Member SET memFamilyID = 3 WHERE memberID = :tempMemberID");
 		$query->execute(array('tempMemberID'=>$tempMemberID));
 	}
-	foreach ($_POST[Family4Select] AS $tempMemberID) {
+	foreach ($_POST['Family4Select'] AS $tempMemberID) {
 		$query = $db->prepare("UPDATE Member SET memFamilyID = 4 WHERE memberID = :tempMemberID");
 		$query->execute(array('tempMemberID'=>$tempMemberID));
 	}
@@ -52,7 +52,7 @@
 	         
 	while($rowFam = $resultFam->fetch()) {
 	
-	    $tempFamilyID = $rowFam[familyID];
+	    $tempFamilyID = $rowFam['familyID'];
 	    
 	    $famnum = 0;
 	    
@@ -63,7 +63,7 @@
 		$query->execute(array('tempFamilyID'=>$tempFamilyID));
 			$query->setFetchMode(PDO::FETCH_ASSOC);
 		$row = $query->fetch();
-		$famnum = $row[pts];
+		$famnum = $row['pts'];
 					
 	// SET ALL FAMILIES' TOTAL POINTS IN DATABASE
 	// ------------------------------------------
