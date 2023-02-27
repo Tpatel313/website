@@ -87,7 +87,7 @@ while ($row = $peopleQuery->fetch()) {
                         echo "<tbody>";
                         $count = 1;
                         foreach ($memberCountArray as $currentMemberId => $eventCount) {
-                            $name = $people[$currentMemberId];
+                            $name = isset($people[$currentMemberId]) ? $people[$currentMemberId] : '';
                             if (strlen($name) > 0) {
                                 if ($currentMemberId == $memberID) {
                                     echo "<tr bgcolor=\"#b3a369\">";
