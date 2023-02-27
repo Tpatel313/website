@@ -72,7 +72,12 @@
 <?php require "partials/head.php" ?>
 
 <body>
-<?php require "partials/header.php" ?>
+<?php require "partials/header.php";
+//<?PHP if($currentType=="mandatory") echo "selected";
+//<?PHP if($currentType=="sports") echo "selected";
+//<?PHP if($currentType == NULL || $currentType=="social") echo "selected";
+//<?PHP if($currentType=="work") echo "selected";
+?>
 
 <div class="container">
     <h3>Edit Events</h3>
@@ -94,10 +99,10 @@
                     <div class="col-md-6 mb-3">
                         <label for="event-type">Type</label>
                         <select class="custom-select d-block w-100" name="type" id="event-type" required="">
-                            <option value="mandatory"  <?PHP if($currentType=="mandatory") echo "selected";?>>Mandatory</option>
-                            <option value="sports"  <?PHP if($currentType=="sports") echo "selected";?>>Sports</option>
-                            <option value="social"  <?PHP if($currentType == NULL || $currentType=="social") echo "selected";?>>Social</option>
-                            <option value="work"  <?PHP if($currentType=="work") echo "selected";?>>Work</option>
+                            <option value="mandatory">Mandatory</option>
+                            <option value="sports">Sports</option>
+                            <option value="social">Social</option>
+                            <option value="work">Work</option>
                         </select>
                         <div class="invalid-feedback">
                             Please select a valid type.
@@ -191,16 +196,6 @@
                             Event year required.
                         </div>
                     </div>
-                </div>
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" name="isFamilyEvent"  id="family-event" onClick="rereload(this.form)"
-                        <?php
-                        if($familyEvent == "true") {
-                            echo " checked=\"yes\"";
-                        }
-                        ?>
-                    >
-                    <label class="custom-control-label" for="family-event">Family event?</label>
                 </div>
                 <div class="custom-control custom-checkbox mb-2">
                     <input type="checkbox" class="custom-control-input" name="isBonus" id="bonus-event">

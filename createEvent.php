@@ -9,13 +9,15 @@
 	require "html_header_begin.txt";
 	require "html_header_end.txt";
 
-	if($_POST['isBonus'] == 'on') {
+    $bonusvar = isset($_POST['isBonus']) ? $_POST['isBonus'] : '';
+	if($bonusvar == 'on') {
 		$bonus = 1;
 	} else {
 		$bonus = 0;
 	}
-	
-	if($_POST['isFamilyEvent'] == 'on') {
+
+    $familyeventvar = isset($_POST['isFamilyEvent']) ? $_POST['isFamilyEvent'] : '';
+	if($familyeventvar == 'on') {
 		$family = 1;
 	} else {
 		$family = 0;
