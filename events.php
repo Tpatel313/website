@@ -90,6 +90,7 @@ if($month=='all') {
                 </tr>
                 </thead>
                 <tbody>";
+        $count = 0;
         while($row = $query->fetch())  {
 //			$counter = $counter + 1;
             $tempEventID = $row['eventID'];
