@@ -544,26 +544,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" name="newIsFamilyEvent"  id="newIsFamilyEvent" onchange="reload3(this.form)"
-                                   <?php
-
-                                   if($isFamilyEvent=="none"){
-                                       if($retrievedEvent['isFamilyEvent'] == 1) {
-                                           echo "checked=\"yes\"";
-                                           $isFamilyEvent="true";
-                                       } else {
-                                           $isFamilyEvent="false";
-                                       }
-                                   } else {
-                                       if($isFamilyEvent == "true") {
-                                           echo "checked=\"yes\"";
-                                       }
-                                   }
-                                   ?>
-                            >
-                            <label class="custom-control-label" for="newIsFamilyEvent">Family event?</label>
-                        </div>
                         <div class="custom-control custom-checkbox mb-2">
                             <input type="checkbox" class="custom-control-input" name="newIsBonus" id="newIsBonus"
                                 <?php
