@@ -30,7 +30,8 @@
 		$query2->execute(array('tempEventID'=>$tempEventID, 'memberID'=>$memberID));
 			$query->setFetchMode(PDO::FETCH_ASSOC);
 		$num_results = $query2->rowCount();
-		if($_POST[$tempEventID] == 'on') {
+        $tempEventIDval = isset($_POST[$tempEventID]) ? $_POST[$tempEventID] : 'off';
+		if($tempEventIDval == 'on') {
 			if($num_results == 0) {
 				$query3 = $db->prepare("INSERT INTO AttendsEvent (memberID, familyID, eventID) VALUES (:memberID, :memFamilyID, :tempEventID)");
 				$query3->execute(array('memberID'=>$memberID, 'memFamilyID'=>$memFamilyID, 'tempEventID'=>$tempEventID));

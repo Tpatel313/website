@@ -122,7 +122,7 @@ while($row = $rank_query->fetch()) {
                 $currentmonth = $today['mon'];
                 $currentyear = $today['year'];
 
-                $events_query = $db->query("SELECT * FROM Event WHERE isFamilyEvent = '0' AND STR_TO_DATE(CONCAT(dateMonth,'/',dateDay,'/',dateYear ),'%m/%d/%Y') <= STR_TO_DATE(CONCAT($currentmonth,'/',$currentday,'/',$currentyear ),'%m/%d/%Y') ORDER BY dateMonth DESC, dateDay DESC, eventName LIMIT 0, 10");
+                $events_query = $db->query("SELECT * FROM Event WHERE isFamilyEvent = '0' AND STR_TO_DATE(CONCAT(dateMonth,'/',dateDay,'/',dateYear ),'%m/%d/%Y') <= STR_TO_DATE(CONCAT($currentmonth,'/',$currentday,'/',$currentyear ),'%m/%d/%Y') ORDER BY dateYear DESC, dateMonth DESC, dateDay DESC, eventName LIMIT 0, 10");
                 $events_query->setFetchMode(PDO::FETCH_ASSOC);
 
                 $rowcount = $events_query->rowCount();
