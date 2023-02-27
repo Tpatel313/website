@@ -13,7 +13,7 @@
 	    $currentday = $today['mday'];
 	    $currentmonth = $today['mon'];
 	    $currentyear = $today['year'];
-	    $query = $db->query("SELECT * FROM Event WHERE isFamilyEvent = '0' AND STR_TO_DATE(CONCAT(dateMonth,'/',dateDay,'/',dateYear ),'%m/%d/%Y') <= STR_TO_DATE(CONCAT($currentmonth,'/',$currentday,'/',$currentyear ),'%m/%d/%Y') ORDER BY dateMonth DESC, dateDay DESC, eventName LIMIT 0, 10");
+	    $query = $db->query("SELECT * FROM Event WHERE isFamilyEvent = '0' AND STR_TO_DATE(CONCAT(dateMonth,'/',dateDay,'/',dateYear ),'%m/%d/%Y') <= STR_TO_DATE(CONCAT($currentmonth,'/',$currentday,'/',$currentyear ),'%m/%d/%Y') ORDER BY dateYear DESC, dateMonth DESC, dateDay DESC, eventName LIMIT 0, 10");
 	    	$query->setFetchMode(PDO::FETCH_ASSOC);
 	} elseif($query_bound == 'all') {
 	    $query = $db->query("SELECT * FROM Event");

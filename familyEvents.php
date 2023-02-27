@@ -12,7 +12,7 @@
 <h2 class="mb-3">Family Events</h2>
 <?php
 	
-	$query = $db->query("SELECT * FROM (AttendsEvent RIGHT OUTER JOIN Event ON AttendsEvent.eventID = Event.eventID) LEFT OUTER JOIN Family ON AttendsEvent.familyID = Family.familyID  WHERE isFamilyEvent = '1' ORDER BY dateMonth, dateDay, eventName");
+	$query = $db->query("SELECT * FROM (AttendsEvent RIGHT OUTER JOIN Event ON AttendsEvent.eventID = Event.eventID) LEFT OUTER JOIN Family ON AttendsEvent.familyID = Family.familyID  WHERE isFamilyEvent = '1' ORDER BY dateYear, dateMonth, dateDay, eventName");
 		$query->setFetchMode(PDO::FETCH_ASSOC);
 	$num_results = $query->rowCount();
 	if($num_results == 0){
@@ -21,7 +21,7 @@
         if($_SESSION['isAdmin']==1) {
         	$query2 = $db->query("SELECT familyID, familyName FROM Family");
         		$query->setFetchMode(PDO::FETCH_ASSOC);
-        	$query3 = $db->query("SELECT * FROM Event WHERE isFamilyEvent = '1' ORDER BY dateMonth, dateDay, eventName");
+        	$query3 = $db->query("SELECT * FROM Event WHERE isFamilyEvent = '1' ORDER BY dateYear, dateMonth, dateDay, eventName");
 			echo "<form action=\"updateFamilyEvents.php\" method=\"POST\">\n";
             echo "<h6><strong>Assign an Event to a Family:</strong></h6>";
             echo "
