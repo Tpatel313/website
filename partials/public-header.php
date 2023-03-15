@@ -71,11 +71,11 @@
                         <a class="dropdown-item" href="/big-buzz">Request Big Buzz</a>
                     </div>
                 </li>
-                <!-- <li class="nav-item">
-                    <a class="nav-link btn-link" href="https://reckclub.ecwid.com">Store</a>
-                </li> --!>
                 <li class="nav-item">
-                    <a class="nav-link btn-link" href="https://traditions.gatech.edu/">Traditions</a>
+                    <a class="nav-link btn-link" href="https://reckclub.company.site" target="_blank">Store</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn-link" href="https://traditions.gatech.edu/" target="_blank">Traditions</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link btn-link" href="/traditionkeepers">Tradition Keepers</a>
