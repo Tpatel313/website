@@ -321,6 +321,32 @@
     });
     ?>
 </div>
+    <hr class="mb-4">
+    <h4 class="mb-3">Have more questions about the Reck?</h4>
+    <div class="row mb-2">
+        <div class="col-md-6">
+            <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                <div class="card-body d-flex flex-column align-items-start">
+                    <strong class="d-inline-block mb-2 text-secondary">The Reck</strong>
+                    <h3 class="mb-1 text-dark">The Tradition</h3>
+                    <p class="card-text mb-auto">The Reck is an iconic mascot of Georgia Tech; An interesting start and a rich history make it one of the most beloved and unique mascots in the country!</p>
+                    <a href="/reck/">Read more</a>
+                </div>
+                <img class="card-img-right img-fluid flex-auto d-none d-md-block" src="/img/2023/ReckGarageDark.jpg" style="width: 200px; height: 250px;">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                <div class="card-body d-flex flex-column align-items-start">
+                    <strong class="d-inline-block mb-2 text-secondary">The Reck</strong>
+                    <h3 class="mb-1 text-dark">History</h3>
+                    <p class="card-text mb-auto">The Reck was formally introduced as Georgia Tech's mascot when it led the football team out on to Grant Field for the 1961 homecoming game...</p>
+                    <a href="/reckhistory">Continue reading</a>
+                </div>
+                <img class="card-img-right img-fluid flex-auto d-none d-md-block" src="/img/promo/1961-reck-debut.jpg" style="width: 200px; height: 250px;">
+            </div>
+        </div>
+    </div>
 </div>
 <?php require "../partials/footer.php" ?>
 <?php require "../partials/scripts.php" ?>
