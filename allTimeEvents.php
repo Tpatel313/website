@@ -23,10 +23,23 @@ if (count($result) > 0) {
         $attendanceQuery->execute(array('id'=>$id));
         $attendanceQuery->setFetchMode(PDO::FETCH_ASSOC);
         $eventIds = [];
+        $firstEventId = 1000000000000;
+        $lastEventId = 0;
         while ($row = $attendanceQuery->fetch()) {
-            $eventIds[] = $row['eventId'];
+            $eventId = $row['eventId'];
+            if ($eventId < 9875) { // Events started at ID 9875, went up to 12815, then started again at 1
+                $eventId = $eventId+12815; // This is done to account for people who did events before and after 12815
+            } // Note this will not work when events reach 9875 again
+            if ($eventId<$firstEventId) {
+                $firstEventId = $eventId;
+            }
+            if ($eventId>$lastEventId) {
+                $lastEventId = $eventId;
+            }
+            $eventIds[] = $eventId;
         }
-        $eventCounts[sizeof($eventIds)] = array($id, $FirstName, $LastName);
+        $totalPossibleEvents = $lastEventId-$firstEventId+1;
+        $eventCounts[sizeof($eventIds)] = array($id, $FirstName, $LastName, $totalPossibleEvents);
     }
 }
 krsort($eventCounts, 1);
@@ -44,18 +57,23 @@ krsort($eventCounts, 1);
             <table class="table table-hover table-sm mb-3">
                 <?php
                 if (sizeof($eventCounts) > 0) {
-                    echo "<thead><tr><th>Rank</th><th>Member</th><th>Total Events Attended</th></tr></thead>";
+                    echo "<thead><tr><th>Rank</th><th>Member</th><th>Events Attended/Events Possible</th></tr></thead>";
                     echo "<tbody>";
                     $count = 1;
                     foreach ($eventCounts as $key => $eventCount) {
+                        if ($count==101) {
+                            break; // Only show the top 100...Helping performance for future
+                        }
                         $totalEvents = $key;
                         $firstName = $eventCount[1];
                         $lastName = $eventCount[2];
+                        $totalPossibleEvents = $eventCount[3];
                         $name = $firstName . ' ' . $lastName;
                         echo "<tr>";
                         echo "<td>" . $count . "</td>";
                         echo "<td>" . $name . "</td>";
-                        echo "<td>" . $totalEvents . "</td></tr>";
+                        $eventPct= number_format(($totalEvents/$totalPossibleEvents)*100,1);
+                        echo "<td>" . $totalEvents . "/" . $totalPossibleEvents . " (" . $eventPct . "%)</td></tr>";
                         $count++;
                     }
                     echo "</tbody>";
