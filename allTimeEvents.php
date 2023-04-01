@@ -65,13 +65,14 @@ krsort($eventCounts, 1);
                             break; // Only show the top 100...Helping performance for future
                         }
                         $totalEvents = $key;
+                        $memberId = $eventCount[0];
                         $firstName = $eventCount[1];
                         $lastName = $eventCount[2];
                         $totalPossibleEvents = $eventCount[3];
                         $name = $firstName . ' ' . $lastName;
                         echo "<tr>";
                         echo "<td>" . $count . "</td>";
-                        echo "<td>" . $name . "</td>";
+                        echo "<td>" . '<a href="/memberProfile.php?memberId=' . $memberId . '">' . $name . '</a>' . "</td>";
                         $eventPct= number_format(($totalEvents/$totalPossibleEvents)*100,1);
                         echo "<td>" . $totalEvents . "/" . $totalPossibleEvents . " (" . $eventPct . "%)</td></tr>";
                         $count++;
