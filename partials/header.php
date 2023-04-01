@@ -34,6 +34,9 @@
 <!--                    <a class="nav-link btn-link" href="/media.php">Media</a>-->
 <!--                </li>-->
                 <li class="nav-item">
+                    <a class="nav-link btn-link" href="/allTimeEvents.php">Records</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link btn-link" href="/memberProfile.php">Profile</a>
                 </li>
                 <?php if($isSecretary == 1 || $isVP == 1 || $isEventAdmin == 1 || $isAdmin == 1) :?>
