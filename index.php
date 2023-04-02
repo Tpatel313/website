@@ -42,8 +42,8 @@
             </div>
             <div class="carousel-item">
                 <picture>
-                    <source class="img-responsive d-block w-100" srcset="/img/promo/ReckEcoCommons_v2.png" media="(min-width: 900px)" alt="2021 Reck at Eco Commons building for a Reck Event">
-                    <img class="img-responsive d-block w-100" src="/img/promo/ReckEcoCommons.png" alt="2021 Reck at Eco Commons building for a Reck Event">
+                    <source class="img-responsive d-block w-100" srcset="/img/2023/ReckIsraelFest.jpg" media="(min-width: 900px)" alt="Reck at Israel Fest 2023">
+                    <img class="img-responsive d-block w-100" src="/img/promo/ReckIsraelFest.jpg" alt="Reck at Israel Fest 2023">
                 </picture>
                 <div class="gradient">
                 </div>
