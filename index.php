@@ -54,8 +54,8 @@
             </div>
             <div class="carousel-item">
                 <picture>
-                    <source class="img-responsive d-block w-100" srcset="/img/2023/FootballGamePic.png" media="(min-width: 900px)" alt="2022 Homecoming Game Pic">
-                    <img class="img-responsive d-block w-100" src="/img/2023/FootballGamePic.png" alt="2022 Homecoming Game Pic">
+                    <source class="img-responsive d-block w-100" srcset="/img/2023/TNightPic.jpg" media="(min-width: 900px)" alt="2022 Homecoming Game Pic">
+                    <img class="img-responsive d-block w-100" src="/img/2023/TNightPic.jpg" alt="2022 Homecoming Game Pic">
                 </picture>
                 <div class="gradient">
                 </div>
