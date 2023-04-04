@@ -19,7 +19,9 @@ $pointsInfo["Spring 2021"] = array("Charlie Hammer", 1127, "Caroline Means", 106
 <?php require "partials/head.php"; ?>
 <body>
 <?php require "partials/header.php"; ?>
-
+<div class="container">
+    <h2>Winners' Circle</h2>
+</div>
 <div class="container">
     <div class="row mb-3">
         <div class="col-12">

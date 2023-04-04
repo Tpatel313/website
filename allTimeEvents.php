@@ -50,7 +50,9 @@ krsort($eventCounts, 1);
 <?php require "partials/head.php"; ?>
 <body>
 <?php require "partials/header.php"; ?>
-
+<div class="container">
+    <h2>All-Time Events Top 100</h2>
+</div>
 <div class="container">
     <div class="row mb-3">
         <div class="col-12">

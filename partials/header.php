@@ -33,7 +33,7 @@
                 <li class="nav-item">
                     <a class="nav-link btn-link" href="/memberProfile.php">Profile</a>
                 </li>
-                <li class="nav-item dropdown">
+                <!--<li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Records
                     </a>
@@ -41,7 +41,7 @@
                         <a class="dropdown-item" href="/allTimeEvents.php">All Time Events</a>
                         <a class="dropdown-item" href="/pointsLeaders.php">Point Leaders</a>
                     </div>
-                </li>
+                </li>-->
                 <?php if($isSecretary == 1 || $isVP == 1 || $isEventAdmin == 1 || $isAdmin == 1) :?>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

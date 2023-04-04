@@ -11,7 +11,12 @@
 <div class="container">
     <h2>Events Stats</h2>
     <div class="row mb-3">
-
+        <div class="col-12">
+            <a href="/allTimeEvents.php" class="float-left">All-Time Events</a>
+        </div>
+        <div class="col-12">
+            <a href="/pointsLeaders.php" class="float-left">Winners' Circle</a>
+        </div>
     </div>
     <div class="row mb-3">
         <div class="col-8 offset-2">
