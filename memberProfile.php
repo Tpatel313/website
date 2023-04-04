@@ -214,6 +214,9 @@
                             $query->setFetchMode(PDO::FETCH_ASSOC);
 
                             $reckerPair = $query->fetch();
+                            if($reckerPair=="") {
+                                $reckerPair = array('firstName'=>"", 'lastName'=>"");
+                            }
 
                         ?>
                         <input type="text" class="form-control" size=15 maxlength=5 name="reckerPair" value="<?php echo($reckerPair['firstName'] . " " . $reckerPair['lastName']) ?>" <?php echo $readonlyStatus; ?>>
