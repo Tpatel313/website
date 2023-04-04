@@ -119,7 +119,7 @@
                     <p class="card-text mb-auto">Reck Club is an unforgettable college experience and you should join in on the fun!</p>
                     <a href="/reckruitment/why.php">Continue reading</a>
                 </div>
-                <img class="card-img-right img-fluid flex-auto d-none d-md-block" src="/img/promo/Gameday21.png" alt="Members of RRC posing in the RRC section at a football game during the 2021 football season." style="width: 200px; height: 250px;">
+                <img class="card-img-right img-fluid flex-auto d-none d-md-block" src="/img/2023/BasketballTHWG.JPEG" alt="Members of RRC with THWG towels at u[sic]ga basketball game." style="width: 200px; height: 250px;">
             </div>
         </div>
         <div class="col-md-6">

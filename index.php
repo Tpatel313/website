@@ -18,8 +18,8 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <picture>
-                    <source class="img-responsive d-block w-100" srcset="img/2021/club_before_game_v3.jpg" media="(min-width: 900px)" alt="Reck Club pic before Football game">
-                    <img class="img-responsive d-block w-100" src="img/2021/club_before_game.jpg" alt="Reck Club pic before Football game">
+                    <source class="img-responsive d-block w-100" srcset="img/2023/HomecomingPic.jpg" media="(min-width: 900px)" alt="Reck Club picture after 2022 Mini 500">
+                    <img class="img-responsive d-block w-100" src="img/2023/HomecomingPic.jpg" alt="Reck Club picture after 2022 Mini 500">
                 </picture>
                 <div class="gradient">
                 </div>
@@ -30,8 +30,8 @@
             </div>
             <div class="carousel-item">
                 <picture>
-                    <source class="img-responsive d-block w-100" srcset="/img/2021/merc_ride_out_v2.jpg" media="(min-width: 900px)" alt="2021 Mercedes-Benz game ride-out">
-                    <img class="img-responsive d-block w-100" src="/img/2021/merc_ride_out.jpg" alt="2021 Mercedes-Benz game ride-out">
+                    <source class="img-responsive d-block w-100" srcset="/img/2023/ReckRideoutMBS.jpg" media="(min-width: 900px)" alt="2022 Mercedes-Benz game ride-out from Danny Karnik">
+                    <img class="img-responsive d-block w-100" src="/img/2023/ReckRideoutMBS.jpg" alt="2022 Mercedes-Benz game ride-out from Danny Karnik">
                 </picture>
                 <div class="gradient">
                 </div>
@@ -42,20 +42,20 @@
             </div>
             <div class="carousel-item">
                 <picture>
-                    <source class="img-responsive d-block w-100" srcset="/img/promo/ReckEcoCommons_v2.png" media="(min-width: 900px)" alt="2021 Reck at Eco Commons building for a Reck Event">
-                    <img class="img-responsive d-block w-100" src="/img/promo/ReckEcoCommons.png" alt="2021 Reck at Eco Commons building for a Reck Event">
+                    <source class="img-responsive d-block w-100" srcset="/img/2023/ReckIsraelFest.jpg" media="(min-width: 900px)" alt="Reck at Israel Fest 2023">
+                    <img class="img-responsive d-block w-100" src="/img/promo/ReckIsraelFest.jpg" alt="Reck at Israel Fest 2023">
                 </picture>
                 <div class="gradient">
                 </div>
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Want the Reck at your event?</h5>
-                    <p>When not on official duty, the Ramblin’ Reck may appear at various alumni functions. Proceeds are used to support the maintenance and upkeep of the car. Click <a href="/requests.php">here</a> to make your request!</p>
+                    <p>When not on official duty, the Ramblin’ Reck may appear at various functions. Proceeds are used to support the maintenance and upkeep of the car. Click <a href="/requests.php">here</a> to make your request!</p>
                 </div>
             </div>
             <div class="carousel-item">
                 <picture>
-                    <source class="img-responsive d-block w-100" srcset="/img/2021/merc_alma_mater_v2.jpg" media="(min-width: 900px)" alt="2021 Alma mater on the Mercedes Benz field">
-                    <img class="img-responsive d-block w-100" src="/img/2021/merc_alma_mater.jpg" alt="2021 Alma mater on the Mercedes Benz field">
+                    <source class="img-responsive d-block w-100" srcset="/img/2023/TNightPic.jpg" media="(min-width: 900px)" alt="2022 Homecoming Game Pic">
+                    <img class="img-responsive d-block w-100" src="/img/2023/TNightPic.jpg" alt="2022 Homecoming Game Pic">
                 </picture>
                 <div class="gradient">
                 </div>
@@ -78,7 +78,7 @@
                     <p class="card-text mb-auto">Each year, one student is chosen from the ranks of the club to be the sole driver and primary caretaker of the Ramblin’ Reck.</p>
                     <a href="/reck/drivers.php">Read more</a>
                 </div>
-                <img class="card-img-right img-fluid flex-auto d-none d-md-block" data-src="/img/promo/OmarDriver.jpg" style="width: 200px; height: 250px;" src="/img/promo/OmarDriver.jpg" data-holder-rendered="true">
+                <img class="card-img-right img-fluid flex-auto d-none d-md-block" data-src="/img/2023/DriverPic.jpg" style="width: 200px; height: 250px;" src="/img/2023/DriverPic.jpeg" data-holder-rendered="true">
             </div>
         </div>
         <div class="col-md-6">
@@ -107,7 +107,7 @@
         </div>
         <div class="col-md-6">
             <div class="card flex-md-row mb-4 box-shadow h-md-250">
-                <img class="card-img-left img-fluid flex-auto d-none d-md-block" src="/img/promo/ReckRunningBoard.png" style="width: 200px !important; height: 250px;" data-holder-rendered="true">
+                <img class="card-img-left img-fluid flex-auto d-none d-md-block" src="/img/2023/Bookmobile_2.JPEG" style="width: 200px !important; height: 250px;" data-holder-rendered="true">
                 <div class="card-body d-flex flex-column align-items-start">
                     <strong class="d-inline-block mb-2 text-primary">RECKruitment</strong>
                     <h3 class="mb-1 text-dark">Want to join the tradition?</h3>
