@@ -10,6 +10,7 @@ $pageTitle = "All Time Events";
 $query = $db->prepare("SELECT memberID FROM Member");
 $query->execute();
 $result = $query->fetchAll(PDO::FETCH_COLUMN);
+sort($result);
 $eventCounts = array();
 if (count($result) > 0) {
     foreach($result as $key=>$id){
@@ -39,10 +40,21 @@ if (count($result) > 0) {
             $eventIds[] = $eventId;
         }
         $totalPossibleEvents = $lastEventId-$firstEventId+1;
-        $eventCounts[sizeof($eventIds)] = array($id, $FirstName, $LastName, $totalPossibleEvents);
+        if ($totalPossibleEvents == -999999999999) {
+            $totalPossibleEvents = 1;
+        }
+        $test = sizeof($eventIds);
+        $eventCounts[$id] = array($test, $FirstName, $LastName, $totalPossibleEvents);
+        //$eventCounts[sizeof($eventIds)] = array($id, $FirstName, $LastName, $totalPossibleEvents);
     }
 }
-krsort($eventCounts, 1);
+function mSort($a,$b): int {
+    if ($a[0] == $b[0]) {
+        return 0;
+    }
+    return ($a[0] > $b[0]) ? -1 : 1;
+};
+uasort($eventCounts, "mSort");
 ?>
 
 <!DOCTYPE html>
@@ -62,15 +74,15 @@ krsort($eventCounts, 1);
                     echo "<thead><tr><th>Rank</th><th>Member</th><th>Events Attended/Events Possible</th></tr></thead>";
                     echo "<tbody>";
                     $count = 1;
-                    foreach ($eventCounts as $key => $eventCount) {
+                    foreach ($eventCounts as $key => $memberInfo) {
                         if ($count==101) {
                             break; // Only show the top 100...Helping performance for future
                         }
-                        $totalEvents = $key;
-                        $memberId = $eventCount[0];
-                        $firstName = $eventCount[1];
-                        $lastName = $eventCount[2];
-                        $totalPossibleEvents = $eventCount[3];
+                        $memberId = $key;
+                        $totalEvents = $memberInfo[0];
+                        $firstName = $memberInfo[1];
+                        $lastName = $memberInfo[2];
+                        $totalPossibleEvents = $memberInfo[3];
                         $name = $firstName . ' ' . $lastName;
                         echo "<tr>";
                         echo "<td>" . $count . "</td>";
