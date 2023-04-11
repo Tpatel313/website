@@ -7,7 +7,7 @@ $pageTitle = "All Time Events";
 
 <?php
 $pointsInfo = [];
-$pointsInfo["Spring 2023"] = array("Keshav Ramanathan", 1112, "Matthew Aronin", 1163, "Austin Gies", 1105);
+$pointsInfo["Spring 2023"] = array("Keshav Ramanathan", 1112, "Nick Unger", 1191, "Nathan Dailey", 1190);
 $pointsInfo["Fall 2022"] = array("Keshav Ramanathan", 1112, "Reid Spencer", 1143, "Charlie Hammer", 1127);
 $pointsInfo["Spring 2022"] = array("Jen O'Brien", 1097, "Keshav Ramanathan", 1112, "Matthew Kistner", 1162);
 $pointsInfo["Fall 2021"] = array("Keshav Ramanathan", 1112, "Caroline Means", 1064, "Charlie Hammer", 1127);
