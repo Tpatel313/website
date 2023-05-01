@@ -11,22 +11,27 @@
 <body>
 <?php require "partials/header.php"; ?>
 <?php
-$eventCount = $mandatoryEventCount + $sportsEventCount + $socialEventCount + $workEventCount;
+if($_SESSION['status']!="alumni") {
+    $eventCount = $mandatoryEventCount + $sportsEventCount + $socialEventCount + $workEventCount;
 
-//CALCULATE RANK
-//--------------
+    //CALCULATE RANK
+    //--------------
 
-$rank_query = $db->query("SELECT memberID, memberPoints FROM Member WHERE status!='alumni' ORDER BY memberPoints DESC, lastName");
-$rank_query->setFetchMode(PDO::FETCH_ASSOC);
+    $rank_query = $db->query("SELECT memberID, memberPoints FROM Member WHERE status!='alumni' ORDER BY memberPoints DESC, lastName");
+    $rank_query->setFetchMode(PDO::FETCH_ASSOC);
 
-$count1 = 0;
-
-while($row = $rank_query->fetch()) {
-    $count1++;
-    if($row['memberID'] == $memberID) {
-        $rank = $count1;
-        $pts = $row['memberPoints'];
+    $count1 = 0;
+    while ($row = $rank_query->fetch()) {
+        $count1++;
+        if ($row['memberID'] == $memberID) {
+            $rank = $count1;
+            $pts = $row['memberPoints'];
+        }
     }
+} else {
+    $eventCount=0;
+    $rank=0;
+    $pts=0;
 }
 
 // SHOW USER'S TOTAL POINTS AND RANK
@@ -137,7 +142,11 @@ while($row = $rank_query->fetch()) {
                         $attends_query->setFetchMode(PDO::FETCH_ASSOC);
                         $num_results3 = $attends_query->rowCount();
                         echo "<tr id=\"event-" . $row['eventID'] ."\">";
-                        echo "<th scope='row'><input id=\"event".$count."\" class='event-checkbox' type=\"checkbox\" name=\"";
+                        if($_SESSION['status']=="alumni"){
+                            echo "<th scope='row'><input id=\"event".$count."\" class='event-checkbox' type=\"checkbox\" disabled=\"disabled\" name=\"";
+                        } else {
+                            echo "<th scope='row'><input id=\"event".$count."\" class='event-checkbox' type=\"checkbox\" name=\"";
+                        }
                         echo $row['eventID'];
                         echo "\" ";
                         if($num_results3 == 1) {
@@ -175,7 +184,13 @@ while($row = $rank_query->fetch()) {
         <div class="col-12">
             <div class="float-right">
                 <a href="/events.php" class="btn btn-outline-secondary mr-2">View All Events</a>
-                <input type="submit" class="btn btn-primary" id="submit-points-button">
+                <?php
+                    if($_SESSION['status']=="alumni"){
+                        echo "<input type=\"submit\" class=\"btn btn-primary\" id=\"submit-points-button\" disabled=\"disabled\">";
+                    } else {
+                        echo "<input type=\"submit\" class=\"btn btn-primary\" id=\"submit-points-button\">";
+                    }
+                ?>
             </div>
         </div>
     </div>

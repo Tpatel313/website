@@ -98,7 +98,11 @@ if($month=='all') {
             $attends_query->setFetchMode(PDO::FETCH_ASSOC);
             $num_results3 = $attends_query->rowCount();
             echo "<tr id=\"event-" . $row['eventID'] ."\">";
-            echo "<th scope='row'><input id=\"event".$count."\" class='event-checkbox' type=\"checkbox\" name=\"";
+            if($_SESSION['status']=="alumni"){
+                echo "<th scope='row'><input id=\"event".$count."\" class='event-checkbox' type=\"checkbox\" disabled=\"disabled\" name=\"";
+            } else {
+                echo "<th scope='row'><input id=\"event".$count."\" class='event-checkbox' type=\"checkbox\" name=\"";
+            }
             echo $row['eventID'];
             echo "\" ";
             if($num_results3 == 1) {
@@ -127,13 +131,23 @@ if($month=='all') {
             echo "<input type=\"hidden\" name=\"query_bound\" value=\"recent\">";
         }
         echo "</tbody></table></div></div>";
-        echo "<div class=\"row mb-3\">
+        if ($_SESSION['status'] == "alumni") {
+            echo "<div class=\"row mb-3\">
+        <div class=\"col-12\">
+            <div class=\"float-right\">
+                <input type=\"submit\" class=\"btn btn-primary\" id=\"submit-points-button\" form='updatePoints' value='Update' disabled='disabled'>
+            </div>
+        </div>
+    </div>";
+        } else {
+            echo "<div class=\"row mb-3\">
         <div class=\"col-12\">
             <div class=\"float-right\">
                 <input type=\"submit\" class=\"btn btn-primary\" id=\"submit-points-button\" form='updatePoints' value='Update'>
             </div>
         </div>
     </div>";
+        }
     }
 
     if($month=='all') {
